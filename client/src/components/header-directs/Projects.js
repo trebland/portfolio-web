@@ -1,8 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Grid, Button } from '@material-ui/core';
+import { Grid, Button, Hidden } from '@material-ui/core';
 import CoverImg from '../../images/website-wireframe.png';
 import ProfilePhoto from '../../images/headshot.jpg';
+import SideBar from '../header-components/SideBar';
+import MobileSideBar from '../header-components/MobileSideBar';
 
 const imageStyles = {
   coverStyle: {
@@ -109,27 +111,18 @@ export default function Dashboard() {
   return (
     <div>        
       <Helmet>
-          <title>Debora Sobczak - Dashboard</title>
+          <title>Trevor Bland - Dashboard</title>
           <meta name="description" content="" />
       </Helmet>
       <React.Fragment>
         <Grid container direction="row" justify="flex-start" alignItems="flex-start">
 
-          <Grid style={{paddingTop: '2%'}} className="left-menu" container direction="column" justify="flex-start" alignItems="center" xs={3}>
-            <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
-              <img style={imageStyles.profile} src={ProfilePhoto} alt="Placeholder Text" />
-              <div className="profile-font" style={textStyles.profileTitle}>Trevor Bland</div>
-              <div className="profile-font" style={textStyles.profileSubTitle}>Computer Scientist</div>
-            </Grid>
-            <Grid container item direction="column" justify="flex-start" alignItems="center" xs>
-              <div style={textStyles.navigationTitle}>About</div>
-              <div style={textStyles.navigationTitle}>Fullstack</div>
-              <div style={textStyles.navigationTitle}>Mobile Applications</div>
-              <div style={textStyles.navigationTitle}>Games</div>
-              <div style={textStyles.navigationTitle}>Modeling</div>
-              <span className="profile-font" style={textStyles.email}>Contact: bland.trevor96@gmail.com</span>
-            </Grid>
-          </Grid>
+          <Hidden only={['xs', 'sm', 'md']}>
+            <SideBar />
+          </Hidden>
+          <Hidden only={['lg', 'xl']}>
+            <MobileSideBar />
+          </Hidden>
 
           <Grid className="right-menu" container item direction="column" justify="flex-start" alignItems="center" xs={9}>
             <SectionItem position={1}>
