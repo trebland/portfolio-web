@@ -9,7 +9,7 @@ const imageStyles = {
       maxHeight: '80vh'
     },
     profile: {
-      width: '100%',
+      width: '50%',
       borderRadius: '50%'
     }
   }
@@ -33,7 +33,8 @@ const textStyles = {
     },
     profileSubTitle: {
       color: 'white', 
-      fontSize: 20, 
+      fontSize: 20,
+      marginBottom: '40px' 
     },
     navigationTitle: {
       color: 'white', 
@@ -51,11 +52,11 @@ const textStyles = {
     }
   }
 
-class SideBar extends React.Component {
-    render() {
-        return (
-            <Grid style={{paddingTop: '2%'}} className="left-menu" container direction="column" justify="flex-start" alignItems="center" xs={3}>
-                <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
+function SideBar() {
+    return (
+        <div className="left-menu" >
+            <Grid container direction="column" justify="flex-start" alignItems="center">
+                <Grid container item direction="column" justify="flex-start" alignItems="center" xs>
                     <img style={imageStyles.profile} src={ProfilePhoto} alt="Placeholder Text" />
                     <div className="profile-font" style={textStyles.profileTitle}>Trevor Bland</div>
                     <div className="profile-font" style={textStyles.profileSubTitle}>Computer Scientist</div>
@@ -71,8 +72,8 @@ class SideBar extends React.Component {
                     <p className="profile-font" style={textStyles.email}>Contact: bland.trevor96@gmail.com</p>
                 </Grid>
             </Grid>
-        )
-    }
+        </div>
+    )
 }
 
 export default SideBar;

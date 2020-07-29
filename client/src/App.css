@@ -5,12 +5,25 @@
 .left-menu {
   height: 100vh;
   position: fixed;
+  width: 25%;
+  left: 0;
+  right: auto;
   background-color: #382d2d;
 }
 
 .right-menu {
   position: absolute;
-  left: 25%;
+  left: 23%;
+  width: 75%;
+  background-color: #1e1e1e;
+  padding-bottom: 40px;
+}
+
+.top-menu {
+  background-color: #382d2d;
+}
+
+.bottom-menu {
   background-color: #1e1e1e;
 }
 
@@ -76,4 +89,14 @@ a.button__text:hover {
 
 .secondary-color {
   background-color: #303030;
+}
+
+.segment.primary-color{
+  border-radius: 10%;
+  padding: 10%;
+}
+
+.segment.secondary-color{
+  border-radius: 10%;
+  padding: 10%;
 }

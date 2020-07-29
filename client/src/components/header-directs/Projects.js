@@ -5,6 +5,8 @@ import CoverImg from '../../images/website-wireframe.png';
 import ProfilePhoto from '../../images/headshot.jpg';
 import SideBar from '../header-components/SideBar';
 import MobileSideBar from '../header-components/MobileSideBar';
+import MainContent from '../header-components/MainContent';
+import MobileMainContent from '../header-components/MobileMainContent';
 
 const imageStyles = {
   coverStyle: {
@@ -56,7 +58,7 @@ const textStyles = {
 }
 
 const SectionItem = ({position, children}) => (
-  <Grid className={position%2 ? "primary-color" : "secondary-color"} container item direction="column" justify="center" alignItems="center" style={{height: '100vh'}}>{children}</Grid>
+  <Grid className={position%2 ? "segment primary-color" : "segment secondary-color"} container item direction="column" justify="center" alignItems="center" style={{height: '100vh'}}>{children}</Grid>
 )
 
 const HeaderLink = ({headerTitle, linkDestination}) => (
@@ -124,32 +126,12 @@ export default function Dashboard() {
             <MobileSideBar />
           </Hidden>
 
-          <Grid className="right-menu" container item direction="column" justify="flex-start" alignItems="center" xs={9}>
-            <SectionItem position={1}>
-              <h2><HeaderLink headerTitle={"Latest Development"} linkDestination={"/fullstack"}/></h2>
-              <LatestItem projectTitle={"Repopit.dev"} linkDestination={"/projects/repopit"} 
-                  projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
-                  projectDate={"July 2020"} />
-            </SectionItem>
-            <SectionItem position={2}>
-              <h2><HeaderLink headerTitle={"Full Stack"} linkDestination={"/fullstack"}/></h2>
-              <GridItem projectTitle={"Repopit.dev"} linkDestination={"/projects/repopit"} 
-                  projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
-                  projectDate={"July 2020"} />
-            </SectionItem>
-            <SectionItem position={3}>
-              <h2><HeaderLink headerTitle={"Mobile Applications"} linkDestination={"/fullstack"}/></h2>
-              <GridItem projectTitle={"Repopit.dev"} linkDestination={"/projects/repopit"} 
-                  projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
-                  projectDate={"July 2020"} />
-            </SectionItem>
-            <SectionItem position={4}>
-              <h2><HeaderLink headerTitle={"Modeling"} linkDestination={"/fullstack"}/></h2>
-              <GridItem projectTitle={"Repopit.dev"} linkDestination={"/projects/repopit"} 
-                  projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
-                  projectDate={"July 2020"} />
-            </SectionItem>
-          </Grid>
+          <Hidden only={['xs', 'sm', 'md']}>
+            <MainContent />
+          </Hidden>
+          <Hidden only={['lg', 'xl']}>
+            <MobileMainContent />
+          </Hidden>
 
         </Grid>
       </React.Fragment>
