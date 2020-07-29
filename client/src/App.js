@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
-import Dashboard from './components/header-directs/Dashboard';
 import Projects from './components/header-directs/Projects';
-import About from './components/header-directs/About';
 import NoMatch from './components/NoMatch';
 
 const App = () => (
@@ -15,9 +13,7 @@ const App = () => (
 			</Helmet>
 			<main>
 				<Switch>
-					<Route exact path="/" component={Dashboard} />
-					<Route path="/projects" component={Projects} />
-					<Route path="/about" component={About} />
+					<Route exact path="/" component={Projects} />
 					<Route component={NoMatch} />
 				</Switch>
 			</main>
