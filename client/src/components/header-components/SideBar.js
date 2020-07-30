@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import ProfilePhoto from '../../images/headshot.jpg';
 import IconButton from '@material-ui/core/IconButton';
-import { Email, GitHub } from '@material-ui/icons';
+import { Email, GitHub, ExpandMore } from '@material-ui/icons';
 
 const imageStyles = {
     coverStyle: {

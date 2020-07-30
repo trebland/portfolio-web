@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+h4 {
+  font-family: 'Arvo', serif;
+  font-size: 24px;
+  margin: 0;
+}
+
 .left-menu {
   height: 100vh;
   position: fixed;
@@ -40,9 +46,13 @@
   font-weight: 700;
 }
 
+.caption {
+  color: rgb(154, 1, 201);
+}
+
 .tech-icon {
   color: #fff;
-  font-size: 24px !important;
+  font-size: 32px !important;
   padding-right: 5px;
 
   -webkit-transition: color .5s; /* For Safari 3.0 to 6.0 */
