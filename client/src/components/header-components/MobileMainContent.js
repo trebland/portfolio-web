@@ -57,7 +57,7 @@ const SectionItem = ({position, children}) => (
   
 const HeaderLink = ({headerTitle, linkDestination}) => (
     <Button style={{margin: '25px'}} variant="contained" color="secondary">
-      <a href={linkDestination} className="button__text"><div className="header" style={{color: 'white', fontSize: 28, textAlign: 'center'}}>{headerTitle}</div></a>
+      <a href={linkDestination} className="button__text"><div className="primary-font" style={{color: 'white', fontSize: 28, textAlign: 'center'}}>{headerTitle}</div></a>
     </Button>
 )
   

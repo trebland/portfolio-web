@@ -121,15 +121,11 @@ export default function Dashboard() {
 
           <Hidden only={['xs', 'sm', 'md']}>
             <SideBar />
-          </Hidden>
-          <Hidden only={['lg', 'xl']}>
-            <MobileSideBar />
-          </Hidden>
-
-          <Hidden only={['xs', 'sm', 'md']}>
             <MainContent />
           </Hidden>
+          
           <Hidden only={['lg', 'xl']}>
+            <MobileSideBar />
             <MobileMainContent />
           </Hidden>
 
