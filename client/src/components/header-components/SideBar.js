@@ -51,10 +51,10 @@ const textStyles = {
 
 const iconStyles = {
   email: {
-    fontSize: 100,
+    fontSize: 50,
   },
   github: {
-    fontSize: 100,
+    fontSize: 50,
   }
 }
 
@@ -67,7 +67,7 @@ function SideBar() {
                     <div className="primary-font" style={textStyles.profileTitle}>Trevor Bland</div>
                     <div className="primary-font" style={textStyles.profileSubTitle}>Computer Scientist</div>
                 </Grid>
-                <Grid container item direction="column" justify="flex-start" alignItems="center" xs>
+                <Grid container item direction="column" justify="flex-start" alignItems="flex-start" xs>
                     <a href="/about" className="nav-link primary-font">About</a>
                     <a href="/fullstack" className="nav-link primary-font">Fullstack</a>
                     <a href="/mobile" className="nav-link primary-font">Mobile Applications</a>
@@ -76,7 +76,7 @@ function SideBar() {
                 </Grid>
                 <Grid container item direction="row" justify="space-around" alignItems="center" xs>
                   <a href="mailto:bland.trevor96@gmail.com" className="nav-link"><Email style={iconStyles.email} /></a>
-                  <a href="https:github.com/trebland" className="nav-link"><GitHub style={iconStyles.github} /></a>
+                  <a target="_blank" rel="noreferrer noopener" href="https:github.com/trebland" className="nav-link"><GitHub style={iconStyles.github} /></a>
                 </Grid>
             </Grid>
         </div>

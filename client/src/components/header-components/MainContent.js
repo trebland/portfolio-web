@@ -1,13 +1,18 @@
 import React from 'react';
 import { Grid, Button } from '@material-ui/core';
 import CoverImg from '../../images/website-wireframe.png';
+import OperationPortal from '../../images/operation-portal.png';
+import FocusPocus from '../../images/focus-pocus.png';
+import AntiBody from '../../images/anti-body.png';
+import ColgateTrevor from '../../images/colgate-trevor.jpg';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 const imageStyles = {
     coverStyle: {
       // Left-Image
-      maxWidth: '100%',
-      maxHeight: '80vh'
+      width: '100%',
+      maxHeight: '50vh',
+      borderRadius: '20px',
     },
     profile: {
       width: '100%',
@@ -57,17 +62,17 @@ const SectionItem = ({position, children}) => (
 )
   
 const HeaderLink = ({headerTitle, linkDestination}) => (
-    <Button style={{margin: '25px'}} variant="contained" color="secondary">
-      <a href={linkDestination} className="button__text header" style={{fontSize:28, color: 'white'}}>{headerTitle}</a>
+    <Button style={{margin: '25px'}} variant="contained" className="background-accent">
+      <a href={linkDestination} className="button__text header accent-color">{headerTitle}</a>
     </Button>
 )
   
-const LatestItem = ({projectTitle, linkDestination, projectContributors, projectTechnologies, projectLinks, projectDate}) => (
+const LatestItem = ({img, projectTitle, linkDestination, projectContributors, projectTechnologies, projectLinks, projectDate}) => (
     <Grid container item direction="row" justify="center" alignItems="center" spacing={3}>
       <Grid container item direction="column" justify="center" alignItems="center"xs={12} sm={6}>            
         <ImageText linkDestination={linkDestination} projectTitle={projectTitle}>
           <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
-              <img style={imageStyles.coverStyle} src={CoverImg} alt="Placeholder Text"/>            
+              <img style={imageStyles.coverStyle} src={img} alt="Placeholder Text"/>            
           </Grid>
         </ImageText>
       </Grid>
@@ -75,12 +80,12 @@ const LatestItem = ({projectTitle, linkDestination, projectContributors, project
     </Grid>
 )
   
-const GridItem = ({projectTitle, linkDestination, projectContributors, projectTechnologies, projectLinks, projectDate}) => (
+const GridItem = ({img, projectTitle, linkDestination, projectContributors, projectTechnologies, projectLinks, projectDate}) => (
     <Grid container item direction="row" justify="center" alignItems="center" spacing={3}>
       <Grid container item direction="column" justify="center" alignItems="center"xs={12} sm={6}>            
         <ImageText linkDestination={linkDestination} projectTitle={projectTitle}>
           <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
-              <img style={imageStyles.coverStyle} src={CoverImg} alt="Placeholder Text"/>            
+              <img style={imageStyles.coverStyle} src={img} alt="Placeholder Text"/>            
           </Grid>
         </ImageText>
       </Grid>
@@ -91,7 +96,7 @@ const GridItem = ({projectTitle, linkDestination, projectContributors, projectTe
 const ImageText = ({projectTitle, linkDestination, children}) => (
     <div style={{width: '100%'}} className="img__wrap">
       <div className="img__img">{children}</div>
-      <a href={linkDestination} className="img__description img__text">Read more about the {projectTitle} Campaign</a>
+      <a style={{borderRadius: '20px'}} href={linkDestination} className="img__description img__text">Read more about the {projectTitle} Campaign</a>
     </div>
 )
   
@@ -114,6 +119,7 @@ const CSS = "M5,3L4.35,6.34H17.94L17.5,8.5H3.92L3.26,11.83H16.85L16.09,15.64L10.
 const MATERIALUI = "M8,16.61V15.37L14,11.91V7.23L9,10.12L4,7.23V13L3,13.58L2,13V5L3.07,4.38L9,7.81L12.93,5.54L14.93,4.38L16,5V13.06L10.92,16L14.97,18.33L20,15.43V11L21,10.42L22,11V16.58L14.97,20.64L8,16.61M22,9.75L21,10.33L20,9.75V8.58L21,8L22,8.58V9.75Z";
 const ANDROID = "M16.61 15.15C16.15 15.15 15.77 14.78 15.77 14.32S16.15 13.5 16.61 13.5H16.61C17.07 13.5 17.45 13.86 17.45 14.32C17.45 14.78 17.07 15.15 16.61 15.15M7.41 15.15C6.95 15.15 6.57 14.78 6.57 14.32C6.57 13.86 6.95 13.5 7.41 13.5H7.41C7.87 13.5 8.24 13.86 8.24 14.32C8.24 14.78 7.87 15.15 7.41 15.15M16.91 10.14L18.58 7.26C18.67 7.09 18.61 6.88 18.45 6.79C18.28 6.69 18.07 6.75 18 6.92L16.29 9.83C14.95 9.22 13.5 8.9 12 8.91C10.47 8.91 9 9.24 7.73 9.82L6.04 6.91C5.95 6.74 5.74 6.68 5.57 6.78C5.4 6.87 5.35 7.08 5.44 7.25L7.1 10.13C4.25 11.69 2.29 14.58 2 18H22C21.72 14.59 19.77 11.7 16.91 10.14H16.91Z";
 const IOS = "M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z";
+const WEB = "M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z";
 
 /* Technologies */
 
@@ -190,15 +196,19 @@ const DateContainer = ({children}) => (
 )
 
 const GithubIcon = ({projectLink}) => (
-  <a href={"https:github.com/trebland/" + projectLink}><SvgIcon className="tech-icon"><path d={GITHUB} /></SvgIcon></a>
+  <a target="_blank" rel="noreferrer noopener" href={"https:github.com/trebland/" + projectLink}><SvgIcon className="tech-icon"><path d={GITHUB} /></SvgIcon></a>
 )
 
-const AndroidIcon = () => (
-  <a href={"https://play.google.com/store/apps/details?id=org.orlandochildrenschurch.operationportal"}><SvgIcon className="tech-icon"><path d={ANDROID} /></SvgIcon></a>
+const AndroidIcon = ({link}) => (
+  <a target="_blank" rel="noreferrer noopener" href={"https://play.google.com/store/apps/details?id=" + link}><SvgIcon className="tech-icon"><path d={ANDROID} /></SvgIcon></a>
 )
 
-const IosIcon = () => (
-  <a><SvgIcon className="tech-icon"><path d={IOS} /></SvgIcon></a>
+const IosIcon = ({link}) => (
+  <a target="_blank" rel="noreferrer noopener" href={"http://apps.apple.com/us/app/" + link}><SvgIcon className="tech-icon"><path d={IOS} /></SvgIcon></a>
+)
+
+const WebIcon = ({website}) => (
+  <a target="_blank" rel="noreferrer noopener" href={website}><SvgIcon className="tech-icon"><path d={WEB} /></SvgIcon></a>
 )
 
 
@@ -209,31 +219,35 @@ function MainContent() {
             <Grid container item direction="column" justify="flex-start" alignItems="center">
                 <SectionItem position={1}>
                     <h2><HeaderLink headerTitle={"Latest Development"} linkDestination={"/fullstack"}/></h2>
-                    <LatestItem projectTitle={"Repopit.dev"} linkDestination={"/projects/repopit"} 
+                    <LatestItem img={CoverImg} projectTitle={"Repopit.dev"} linkDestination={"/projects/repopit"} 
                         projectContributors={"Trevor Bland"} projectTechnologies={<span><HtmlIcon/><CssIcon/><JsIcon/><ReactIcon/><MaterialUiIcon/><AwsIcon/></span>} 
-                        projectLinks={<RowContainer linkChildren={<span><AndroidIcon/><IosIcon/></span>} sourceChildren={<GithubIcon projectLink="portfolio-web"/>}/>} projectDate={"July 2020"} />
+                        projectLinks={<RowContainer linkChildren={<span><WebIcon website={"https://repopit.dev"} /></span>} sourceChildren={<GithubIcon projectLink="portfolio-web"/>}/>} 
+                        projectDate={"July 2020"} />
                 </SectionItem>
                 <SectionItem position={2}>
                     <h2><HeaderLink headerTitle={"Full Stack"} linkDestination={"/fullstack"}/></h2>
-                    <GridItem projectTitle={"Operation Portal"} linkDestination={"/projects/repopit"} 
-                        projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
-                        projectDate={"July 2020"} />
+                    <GridItem img={OperationPortal} projectTitle={"Operation Portal"} linkDestination={"/projects/repopit"} projectContributors={"Trevor Bland"} 
+                        projectTechnologies={<span><HtmlIcon/><CssIcon/><JsIcon/><ReactIcon/><MaterialUiIcon/><AwsIcon/></span>} 
+                        projectLinks={<RowContainer 
+                             linkChildren={<span><AndroidIcon link={"org.orlandochildrenschurch.operationportal"}/><IosIcon link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"} /><WebIcon website={"https://repopit.dev"} /></span>} 
+                             sourceChildren={<GithubIcon projectLink="portfolio-web"/>}/>} 
+                        projectDate={"April 2020"} />
                 </SectionItem>
                 <SectionItem position={3}>
-                    <h2><HeaderLink headerTitle={"Mobile Applications"} linkDestination={"/fullstack"}/></h2>
-                    <GridItem projectTitle={"FlikBak"} linkDestination={"/projects/repopit"} 
-                        projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
-                        projectDate={"July 2020"} />
-                </SectionItem>
-                <SectionItem position={3}>
-                    <h2><HeaderLink headerTitle={"Games"} linkDestination={"/fullstack"}/></h2>
-                    <GridItem projectTitle={"FlikBak"} linkDestination={"/projects/repopit"} 
+                    <h2><HeaderLink headerTitle={"Mobile Applications"} linkDestination={"/mobile"}/></h2>
+                    <GridItem img={FocusPocus} projectTitle={"FocusPocus"} linkDestination={"/projects/repopit"} 
                         projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
                         projectDate={"July 2020"} />
                 </SectionItem>
                 <SectionItem position={4}>
-                    <h2><HeaderLink headerTitle={"Modeling"} linkDestination={"/fullstack"}/></h2>
-                    <GridItem projectTitle={"Student Colgate Campaign"} linkDestination={"/projects/repopit"} 
+                    <h2><HeaderLink headerTitle={"Games"} linkDestination={"/games"}/></h2>
+                    <GridItem img={AntiBody} projectTitle={"Anti-Body"} linkDestination={"/projects/repopit"} 
+                        projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
+                        projectDate={"July 2020"} />
+                </SectionItem>
+                <SectionItem position={5}>
+                    <h2><HeaderLink headerTitle={"Modeling"} linkDestination={"/modeling"}/></h2>
+                    <GridItem img={ColgateTrevor} projectTitle={"Student Colgate Campaign"} linkDestination={"/projects/repopit"} 
                         projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
                         projectDate={"July 2020"} />
                 </SectionItem>

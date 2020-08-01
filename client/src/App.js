@@ -8,9 +8,6 @@ import NoMatch from './components/NoMatch';
 const App = () => (
 	<Router>
 		<div>
-			<Helmet>
-				<style>{'body { background-color: #1e1e1e; }'}</style>
-			</Helmet>
 			<main>
 				<Switch>
 					<Route exact path="/" component={Projects} />
