@@ -8,11 +8,6 @@ import { selectPage } from "../../redux/actions/pageActions";
 import ResumePdf from '../../TrevorBland_Resume.pdf'
 
 const imageStyles = {
-    coverStyle: {
-      // Left-Image
-      maxWidth: '100%',
-      maxHeight: '80vh'
-    },
     profile: {
       width: '50%',
       borderRadius: '50%'

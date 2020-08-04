@@ -24,10 +24,6 @@ const textStyles = {
 // liveLinks: List of external links to live project locations (optional)
 // sourceLink: Github link (or other code repository link) (optional)
 
-function appendNewline (item, index) {
-  item += "\n"
-}
-
 const SectionDescription = ({title, contributors, technologies, liveLinks, sourceLink, date}) => (
     <Grid container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>            
       <div className="title" style={textStyles.descriptionTitle}>{title}</div>
