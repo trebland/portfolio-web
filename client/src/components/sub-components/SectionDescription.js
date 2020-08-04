@@ -11,7 +11,8 @@ const textStyles = {
       color: 'white', 
       fontSize: 20, 
       textAlign: 'left', 
-      width: '100%', 
+      width: '100%',
+      objectFit: 'scale-down',
       marginBottom: '20px'
     },
 }

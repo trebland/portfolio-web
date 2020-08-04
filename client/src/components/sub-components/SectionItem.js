@@ -39,7 +39,7 @@ const SectionItem = ({img, title, internalLink, children}) => (
 const ImageText = ({title, internalLink, children}) => (
     <div style={{width: '100%'}} className="img__wrap">
       <div className="img__img">{children}</div>
-      <a style={{borderRadius: '20px'}} href={internalLink} className="img__description img__text">Read more about the {title} Campaign</a>
+      <a style={{borderRadius: '20px'}} href={internalLink} className="img__description img__text">Read more about {title}</a>
     </div>
 )
 

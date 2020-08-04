@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import CoverImg from '../../images/website-wireframe.png';
+import { SectionContainer, SectionHeader, SectionItem, SectionDescription, LinkWrapper as LW} from '../sub-components/index.js';
+import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon } from '../../SvgIcons.js';
 
 export default function About() {
     return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import CoverImg from '../../images/website-wireframe.png';
 import OperationPortal from '../../images/operation-portal.png';
-import FocusPocus from '../../images/focus-pocus.png';
+import FocusPocus from '../../images/focus-pocus-cover.png';
 import AntiBody from '../../images/anti-body.png';
 import { SectionContainer, SectionHeader, SectionItem, SectionDescription, LinkWrapper as LW} from '../sub-components/index.js';
 import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../../SvgIcons.js';

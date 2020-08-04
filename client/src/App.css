@@ -72,6 +72,7 @@ h4 {
 .img__description {
   position: absolute;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
   display: flex;
   text-align: center;
   justify-content: center;
