@@ -5,8 +5,8 @@ import OperationPortal from '../../images/operation-portal.png';
 import FocusPocus from '../../images/focus-pocus.png';
 import AntiBody from '../../images/anti-body.png';
 import ColgateTrevor from '../../images/colgate-trevor.jpg';
-import { SectionContainer, SectionHeader, SectionItem } from '../sub-components/index';
-import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon } from '../../SvgIcons';
+import { SectionContainer, SectionHeader, SectionItem, SectionDescription, LinkWrapper as LW} from '../sub-components/index.js';
+import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../../SvgIcons.js';
 
 const imageStyles = {
     coverStyle: {
@@ -58,98 +58,47 @@ const textStyles = {
     }
 }
 
-/* Links */
-
-const CreditContainer = ({children}) => (
-  <span className="link-container">
-    <h4 className="caption">Credits</h4>
-    {children}
-  </span>
-)
-
-const TechnologyContainer = ({children}) => (
-  <span className="link-container">
-    <h4 className="caption">Technologies</h4>
-    {children}
-  </span>
-)
-
-const LinkAndSourceContainer = ({linkChildren, sourceChildren}) => (
-  <Grid container item direction="row" justify="flex-start" alignItems="center" spacing={9}>
-    <LinkContainer>
-      {linkChildren}
-    </LinkContainer>
-    <SourceContainer>
-      {sourceChildren}
-    </SourceContainer>
-  </Grid>
-)
-
-const LinkContainer = ({children}) => (
-  <Grid item className="link-container">
-    <h4 className="caption">Links</h4>
-    {children}
-  </Grid>
-)
-
-const SourceContainer = ({children}) => (
-  <Grid item className="source-container">
-    <h4 className="caption">Source</h4>
-    {children}
-  </Grid>
-)
-
-const DateContainer = ({children}) => (
-  <span className="source-container">
-    <h4 className="caption">Released</h4>
-    {children}
-  </span>
-)
-
-const LinkWrapper = ({link, children}) => (
-    <a target="_blank" rel="noreferrer noopener" href={link}>{children}</a>
-)
-
 export default function Projects() {
     return (
         <div id="Projects">
             <Grid container item direction="column" justify="flex-start" alignItems="center">
                 <SectionContainer position={1}>
                     <h2><SectionHeader headerTitle={"Latest Development"} linkDestination={"/fullstack"}/></h2>
-                    <SectionItem img={CoverImg} projectTitle={"Repopit.dev"} linkDestination={"/projects/repopit"} 
-                        projectContributors={"Trevor Bland"} 
-                        projectTechnologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
-                        projectLinks={<SectionItem 
-                          linkChildren={<span><WebIcon website={"https://repopit.dev"} /></span>} 
-                          sourceChildren={<GithubIcon projectLink="portfolio-web"/>}/>} 
-                        projectDate={"August 2020"} />
+                    <SectionItem img={CoverImg} title={"Repopit.dev"} internalLink={"/projects/repopit"}>
+                        <SectionDescription title={"Repopit.dev"} contributors={"Trevor Bland"} 
+                        technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
+                        liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW link={"portfolio-web"}><GithubIcon /></LW>} 
+                        date={"August 2020"} />
+                    </SectionItem>
                 </SectionContainer>
                 <SectionContainer position={2}>
                     <h2><SectionHeader headerTitle={"Full Stack"} linkDestination={"/fullstack"}/></h2>
-                    <SectionItem img={OperationPortal} projectTitle={"Operation Portal"} linkDestination={"/projects/repopit"} projectContributors={"Trevor Bland"} 
-                        projectTechnologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><MaterialUiIcon /></span>} 
-                        projectLinks={<SectionItem 
-                          linkChildren={<span><LinkWrapper link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LinkWrapper><LinkWrapper link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LinkWrapper><LinkWrapper link={"https://repopit.dev"}><WebIcon /></LinkWrapper></span>} 
-                          sourceChildren={<LinkWrapper link={"portfolio-web"}><GithubIcon /></LinkWrapper>} />}
-                        projectDate={"April 2020"} />
+                    <SectionItem img={OperationPortal} title={"Operation Portal"} internalLink={"/projects/repopit"}>
+                        <SectionDescription title={"Operation Portal"} contributors={"Trevor Bland"} 
+                        technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><DotNetIcon /><PostgreSqlIcon /><ReactIcon /><FlutterIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
+                        liveLinks={<span><LW link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW><LW link={"https://operation-portal.com"}><WebIcon /></LW></span>} 
+                        sourceLink={<LW link={"portfolio-web"}><GithubIcon /></LW>} 
+                        date={"April 2020"} />
+                    </SectionItem>
                 </SectionContainer>
                 <SectionContainer position={3}>
                     <h2><SectionHeader headerTitle={"Mobile Applications"} linkDestination={"/mobile"}/></h2>
-                    <SectionItem img={FocusPocus} projectTitle={"FocusPocus"} linkDestination={"/projects/repopit"} 
-                        projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"} 
-                        projectLinks={<SectionItem 
-                          linkChildren={<span><AndroidIcon link={"org.orlandochildrenschurch.operationportal"}/><IosIcon link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"} /><WebIcon website={"https://repopit.dev"} /></span>} 
-                          sourceChildren={<GithubIcon projectLink="portfolio-web"/>}/>} 
-                        projectDate={"December 2019"} />
+                    <SectionItem img={FocusPocus} title={"Focus Pocus"} internalLink={"/projects/repopit"}>
+                        <SectionDescription title={"Focus Pocus"} contributors={"Trevor Bland"} 
+                        technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><MongoDbIcon /><ExpressIcon /><ReactIcon /><NodeJsIcon /><FlutterIcon /><AwsIcon /></span>}
+                        sourceLink={<LW link={"portfolio-web"}><GithubIcon /></LW>} 
+                        date={"December 2019"} />
+                    </SectionItem>
                 </SectionContainer>
                 <SectionContainer position={4}>
                     <h2><SectionHeader headerTitle={"Games"} linkDestination={"/games"}/></h2>
-                    <SectionItem img={AntiBody} projectTitle={"Anti-Body"} linkDestination={"/projects/repopit"} 
-                        projectContributors={"Trevor Bland"} projectTechnologies={"React, JavaScript, AWS, GitHub, HTML, CSS, Material.UI"}
-                        projectLinks={<SectionItem 
-                          linkChildren={<span><AndroidIcon link={"org.orlandochildrenschurch.operationportal"}/><IosIcon link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"} /><WebIcon website={"https://repopit.dev"} /></span>} 
-                          sourceChildren={<GithubIcon projectLink="portfolio-web"/>}/>} 
-                        projectDate={"January 2018"} />
+                    <SectionItem img={AntiBody} title={"Anti-Body"} internalLink={"/projects/repopit"}>
+                        <SectionDescription title={"Anti-Body"} contributors={"Trevor Bland"} 
+                        technologies={<span><UnityIcon /><CSharpIcon /></span>} 
+                        liveLinks={<span><LW link={"https://globalgamejam.org/2018/games/anti-body"}><WebIcon /></LW></span>} 
+                        sourceLink={<LW link={"portfolio-web"}><GithubIcon /></LW>} 
+                        date={"January 2018"} />
+                    </SectionItem>
                 </SectionContainer>
             </Grid>
         </div>

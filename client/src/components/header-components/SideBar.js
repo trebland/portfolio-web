@@ -34,6 +34,9 @@ const iconStyles = {
   email: {
     fontSize: 50,
   },
+  linkedIn: {
+    fontSize: 50,
+  },
   github: {
     fontSize: 50,
   }
@@ -54,11 +57,12 @@ export function SideBar() {
                 <button onClick={() => dispatch(selectPage("About"))} id="About" className="nav-link primary-font">About</button>
                 <button onClick={() => dispatch(selectPage("Projects"))} id="Projects" className="nav-link primary-font">Projects</button>
                 <button onClick={() => dispatch(selectPage("Modeling"))} id="Modeling" className="nav-link primary-font">Modeling</button>
+                <button onClick={() => dispatch(selectPage("Resume"))} id="Resume" className="nav-link primary-font">Resume</button>
             </Grid>
             <Grid container item direction="row" justify="space-around" alignItems="center" xs>
               <a href="mailto:bland.trevor96@gmail.com" className="nav-link"><Email style={iconStyles.email} /></a>
-              <a target="_blank" rel="noreferrer noopener" href="https://github.com/trebland" className="nav-link"><LinkedIn style={iconStyles.github} /></a>
-              <a target="_blank" rel="noreferrer noopener" href="https://linkedin.com/in/trevor-bland-94b2941b4/" className="nav-link"><GitHub style={iconStyles.github} /></a>
+              <a target="_blank" rel="noreferrer noopener" href="https://linkedin.com/in/trevor-bland-94b2941b4/" className="nav-link"><LinkedIn style={iconStyles.linkedIn} /></a>
+              <a target="_blank" rel="noreferrer noopener" href="https://github.com/trebland" className="nav-link"><GitHub style={iconStyles.github} /></a>
             </Grid>
         </Grid>
     </div>

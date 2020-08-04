@@ -11,6 +11,7 @@ const App = () => (
 			<main>
 				<Switch>
 					<Route exact path="/" component={Dashboard} />
+					<Route exact path="/resume" component={Dashboard} />
 					<Route component={NoMatch} />
 				</Switch>
 			</main>

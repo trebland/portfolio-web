@@ -1,3 +1,19 @@
+import React from 'react';
+import { Grid } from '@material-ui/core';
+
+const imageStyles = {
+    coverStyle: {
+      // Left-Image
+      width: '100%',
+      maxHeight: '50vh',
+      borderRadius: '20px',
+    },
+    profile: {
+      width: '100%',
+      borderRadius: '50%'
+    }
+}
+
 // Takes the following parameters to construct successfully
 // img: Image of the project to display
 // title: Title of the project
@@ -7,7 +23,7 @@
 // externalLinks: List of external links, linking to live project locations
 // date: date the project was released
 
-export const SectionItem = ({img, title, internalLink, contributors, technologies, externalLinks, date}) => (
+const SectionItem = ({img, title, internalLink, children}) => (
     <Grid container item direction="row" justify="center" alignItems="center" spacing={3}>
       <Grid container item direction="column" justify="center" alignItems="center"xs={12} sm={6}>            
         <ImageText internalLink={internalLink} title={title}>
@@ -16,17 +32,7 @@ export const SectionItem = ({img, title, internalLink, contributors, technologie
           </Grid>
         </ImageText>
       </Grid>
-      <GridDescription title={title} contributors={contributors} technologies={technologies} externalLinks={externalLinks} date={date} />
-    </Grid>
-)
-
-const GridDescription = ({title, contributors, technologies, externalLinks, date}) => (
-    <Grid container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>            
-      <div className="title" style={textStyles.descriptionTitle}>{title}</div>
-      <div style={textStyles.descriptionContent}><CreditContainer>{contributors}</CreditContainer></div>
-      <div style={textStyles.descriptionContent}><TechnologyContainer>{technologies}</TechnologyContainer></div>
-      <div style={textStyles.descriptionContent}>{externalLinks}</div>
-      <div style={textStyles.descriptionContent}><DateContainer>{date}</DateContainer></div>
+      {children}
     </Grid>
 )
 
@@ -37,23 +43,5 @@ const ImageText = ({title, internalLink, children}) => (
     </div>
 )
 
-const CreditContainer = ({children}) => (
-    <span className="link-container">
-      <h4 className="caption">Credits</h4>
-      {children}
-    </span>
-  )
-  
-  const TechnologyContainer = ({children}) => (
-    <span className="link-container">
-      <h4 className="caption">Technologies</h4>
-      {children}
-    </span>
-  )
+export default SectionItem
 
-  const DateContainer = ({children}) => (
-    <span className="source-container">
-      <h4 className="caption">Released</h4>
-      {children}
-    </span>
-  )
