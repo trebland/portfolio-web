@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import { Email, GitHub, LinkedIn, ExpandMore } from '@material-ui/icons';
 import { useDispatch } from "react-redux";
 import { selectPage } from "../../redux/actions/pageActions";
+import ResumePdf from '../../TrevorBland_Resume.pdf'
 
 const imageStyles = {
     coverStyle: {
@@ -57,7 +58,7 @@ export function SideBar() {
                 <button onClick={() => dispatch(selectPage("About"))} id="About" className="nav-link primary-font">About</button>
                 <button onClick={() => dispatch(selectPage("Projects"))} id="Projects" className="nav-link primary-font">Projects</button>
                 <button onClick={() => dispatch(selectPage("Modeling"))} id="Modeling" className="nav-link primary-font">Modeling</button>
-                <button onClick={() => dispatch(selectPage("Resume"))} id="Resume" className="nav-link primary-font">Resume</button>
+                <a href={ResumePdf} id="Resume" className="nav-link primary-font">Resume</a>
             </Grid>
             <Grid container item direction="row" justify="space-around" alignItems="center" xs>
               <a href="mailto:bland.trevor96@gmail.com" className="nav-link"><Email style={iconStyles.email} /></a>

@@ -18,21 +18,22 @@ const textStyles = {
 
 // Takes the following parameters to construct successfully
 // title: Title of the project
-// contributors: List of names of those who contributed to the project
-// technologies: List of technology icons that the project is composed of
-// liveLinks: List of external links to live project locations !(must be wrapped in a link wrapper when passed)!
-// sourceLink: Github link (or other code repository link) !(must be wrapped in a link wrapper when passed)!
+// contributors: List of names of those who contributed to the project (must be array type)
 // date: date the project was released
+// technologies: List of technology icons that the project is composed of (optional)
+// liveLinks: List of external links to live project locations (optional)
+// sourceLink: Github link (or other code repository link) (optional)
+
+function appendNewline (item, index) {
+  item += "\n"
+}
 
 const SectionDescription = ({title, contributors, technologies, liveLinks, sourceLink, date}) => (
     <Grid container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>            
       <div className="title" style={textStyles.descriptionTitle}>{title}</div>
-      <div style={textStyles.descriptionContent}><CreditContainer>{contributors}</CreditContainer></div>
-      <div style={textStyles.descriptionContent}><TechnologyContainer>{technologies}</TechnologyContainer></div>
-      <div style={textStyles.descriptionContent}><LinkAndSourceContainer>
-      {/* Conditional Statement to construct the appropriate container as long as the respective link contains data */}
-      {liveLinks ? <LinkContainer>{liveLinks}</LinkContainer> : <></>}{sourceLink ? <SourceContainer>{sourceLink}</SourceContainer> : <></>}
-      </LinkAndSourceContainer></div>
+      <div style={textStyles.descriptionContent}><CreditContainer>{contributors.map(contributor => (<div className="contributor" key={contributor}>{contributor}</div>))}</CreditContainer></div>
+      <div style={textStyles.descriptionContent}>{technologies ? <TechnologyContainer>{technologies}</TechnologyContainer> : <></>}</div>
+      <div style={textStyles.descriptionContent}><LinkAndSourceContainer>{liveLinks ? <LinkContainer>{liveLinks}</LinkContainer> : <></>}{sourceLink ? <SourceContainer>{sourceLink}</SourceContainer> : <></>}</LinkAndSourceContainer></div>
       <div style={textStyles.descriptionContent}><DateContainer>{date}</DateContainer></div>
     </Grid>
 )
