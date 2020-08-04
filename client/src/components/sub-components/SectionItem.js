@@ -14,6 +14,15 @@ const imageStyles = {
     }
 }
 
+const textStyles = {
+  descriptionContentLeft: {
+    textAlign: 'left', 
+  },
+  descriptionContentRight: {
+    textAlign: 'right', 
+  },
+}
+
 // Takes the following parameters to construct successfully
 // img: Image of the project to display
 // title: Title of the project
@@ -23,8 +32,8 @@ const imageStyles = {
 // externalLinks: List of external links, linking to live project locations
 // date: date the project was released
 
-const SectionItem = ({img, title, internalLink, children}) => (
-    <Grid container item direction="row" justify="center" alignItems="center" spacing={3}>
+const SectionItem = ({img, title, internalLink, position, children}) => (
+    <Grid container className={"segment secondary-font"} item direction={position%2 ? "row" : "row-reverse"} justify="center" alignItems="center" spacing={3}>
       <Grid container item direction="column" justify="center" alignItems="center"xs={12} sm={6}>            
         <ImageText internalLink={internalLink} title={title}>
           <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
@@ -32,7 +41,9 @@ const SectionItem = ({img, title, internalLink, children}) => (
           </Grid>
         </ImageText>
       </Grid>
-      {children}
+      <Grid style={position%2 ? textStyles.descriptionContentLeft : textStyles.descriptionContentRight} container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>        
+        {children}
+      </Grid>
     </Grid>
 )
 

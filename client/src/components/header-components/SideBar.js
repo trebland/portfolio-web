@@ -49,7 +49,7 @@ export function SideBar() {
                 <div className="primary-font" style={textStyles.profileTitle}>Trevor Bland</div>
                 <div className="primary-font" style={textStyles.profileSubTitle}>Computer Scientist</div>
             </Grid>
-            <Grid container item direction="column" justify="flex-start" alignItems="flex-start" xs>
+            <Grid container item direction="column" justify="flex-start" alignItems="flex-start" style={{paddingLeft: 40}} xs>
                 <button onClick={() => dispatch(selectPage("About"))} id="About" className="nav-link primary-font">About</button>
                 <button onClick={() => dispatch(selectPage("Projects"))} id="Projects" className="nav-link primary-font">Projects</button>
                 <button onClick={() => dispatch(selectPage("Modeling"))} id="Modeling" className="nav-link primary-font">Modeling</button>

@@ -8,10 +8,17 @@ h4 {
   margin: 0;
 }
 
+.segment.background {
+  background-image: url("./images/about-background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .left-menu {
+  width: 20%;
   height: 100vh;
   position: fixed;
-  width: 20%;
   left: 0;
   padding-top: 40px;
   right: auto;
@@ -48,6 +55,7 @@ h4 {
 
 .caption {
   color: #FF8036;
+  padding-bottom: 5px;
 }
 
 .tech-icon {
@@ -151,6 +159,11 @@ a.button__text:hover {
 
 /* Nav Link */
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 .nav-link {
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -162,11 +175,8 @@ a.button__text:hover {
 }
 
 .nav-link:hover {
+  cursor: pointer;
   color: rgb(124, 143, 252);
-}
-
-.sidebar-color {
-  background-color: #1e1e1e;
 }
 
 .primary-color {
@@ -198,12 +208,10 @@ a.button__text:hover {
   font-size: 28px;
 }
 
-.segment.primary-color{
-  padding: 10%;
-}
-
-.segment.secondary-color{
-  padding: 10%;
+.segment {
+  padding: 0px 50px;
+  background-color: #1e1e1e;
+  height: 100vh;
 }
 
 /* Used for skip-nav */

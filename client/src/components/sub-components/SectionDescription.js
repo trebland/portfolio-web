@@ -9,10 +9,8 @@ const textStyles = {
     },
     descriptionContent: {
       color: 'white', 
-      fontSize: 20, 
-      textAlign: 'left', 
+      fontSize: 20,
       width: '100%',
-      objectFit: 'scale-down',
       marginBottom: '20px'
     },
 }
@@ -25,14 +23,14 @@ const textStyles = {
 // liveLinks: List of external links to live project locations (optional)
 // sourceLink: Github link (or other code repository link) (optional)
 
-const SectionDescription = ({title, contributors, technologies, liveLinks, sourceLink, date}) => (
-    <Grid container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>            
-      <div className="title" style={textStyles.descriptionTitle}>{title}</div>
-      <div style={textStyles.descriptionContent}><CreditContainer>{contributors.map(contributor => (<div className="contributor" key={contributor}>{contributor}</div>))}</CreditContainer></div>
-      <div style={textStyles.descriptionContent}>{technologies ? <TechnologyContainer>{technologies}</TechnologyContainer> : <></>}</div>
-      <div style={textStyles.descriptionContent}><LinkAndSourceContainer>{liveLinks ? <LinkContainer>{liveLinks}</LinkContainer> : <></>}{sourceLink ? <SourceContainer>{sourceLink}</SourceContainer> : <></>}</LinkAndSourceContainer></div>
-      <div style={textStyles.descriptionContent}><DateContainer>{date}</DateContainer></div>
-    </Grid>
+const SectionDescription = ({title, contributors, technologies, liveLinks, sourceLink, date}) => (      
+  <>   
+    <div className="title" style={textStyles.descriptionTitle}>{title}</div>
+    <div style={textStyles.descriptionContent}><CreditContainer>{contributors.map(contributor => (<div className="contributor" key={contributor}>{contributor}</div>))}</CreditContainer></div>
+    <div style={textStyles.descriptionContent}>{technologies ? <TechnologyContainer>{technologies}</TechnologyContainer> : <></>}</div>
+    <div style={textStyles.descriptionContent}><LinkAndSourceContainer>{liveLinks ? <LinkContainer>{liveLinks}</LinkContainer> : <></>}{sourceLink ? <SourceContainer>{sourceLink}</SourceContainer> : <></>}</LinkAndSourceContainer></div>
+    <div style={textStyles.descriptionContent}><DateContainer>{date}</DateContainer></div>
+  </>
 )
 
 const CreditContainer = ({children}) => (
