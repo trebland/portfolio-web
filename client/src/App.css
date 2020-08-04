@@ -22,7 +22,7 @@ h4 {
   position: absolute;
   left: 20%;
   width: 80%;
-  background-color: #1e1e1e;
+  background-color: #19191A;
 }
 
 .top-menu {
@@ -61,6 +61,48 @@ h4 {
 
 .tech-icon:hover {
   color: rgb(124, 143, 252);
+}
+
+.icon__wrap {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__description {
+  position: absolute;
+  font-family: 'Arvo', serif;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  color: #000;
+
+  padding: 0px auto;
+  top: -40px;
+  bottom: 40px;
+  left: -25px;
+  right: -25px;
+  background: rgb(255, 255, 255);
+
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.icon__description:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.icon__wrap:hover .icon__description {
+  visibility: visible;
+  opacity: 1;
 }
 
 .img__wrap {
@@ -130,7 +172,7 @@ a.button__text:hover {
 
 .primary-color {
   color: #FFFFFF;
-  background-color: #1A1A1B;
+  background-color: #19191A;
 }
 
 .secondary-color {

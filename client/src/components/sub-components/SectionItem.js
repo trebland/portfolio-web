@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 const imageStyles = {
     coverStyle: {
       // Left-Image
-      width: '100%',
+      maxWidth: '100%',
       maxHeight: '50vh',
       borderRadius: '20px',
     },
@@ -37,7 +37,7 @@ const SectionItem = ({img, title, internalLink, children}) => (
 )
 
 const ImageText = ({title, internalLink, children}) => (
-    <div style={{width: '100%'}} className="img__wrap">
+    <div style={imageStyles.coverStyle} className="img__wrap">
       <div className="img__img">{children}</div>
       <a style={{borderRadius: '20px'}} href={internalLink} className="img__description img__text">Read more about {title}</a>
     </div>

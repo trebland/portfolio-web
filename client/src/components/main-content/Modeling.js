@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import ColgateTrevor from '../../images/colgate-trevor.jpg';
 import { SectionContainer, SectionHeader, SectionItem, SectionDescription, LinkWrapper as LW} from '../sub-components/index.js';
-import { WebIcon } from '../../SvgIcons.js';
+import { WebIcon } from '../SvgIcons.js';
 
 export default function Modeling() {
     return (

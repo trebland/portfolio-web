@@ -8,10 +8,6 @@ const imageStyles = {
       maxWidth: '100%',
       maxHeight: '80vh'
     },
-    profile: {
-      width: '100%',
-      borderRadius: '50%'
-    }
 }
   
 const textStyles = {
