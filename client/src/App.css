@@ -15,7 +15,7 @@ h4 {
   background-position: 50% 50%;
 }
 
-.left-menu {
+#left-menu {
   width: 20%;
   height: 100vh;
   position: fixed;
@@ -25,19 +25,19 @@ h4 {
   background-color: #19191A;
 }
 
-.right-menu {
+#right-menu {
   position: absolute;
   left: 20%;
   width: 80%;
   background-color: #19191A;
 }
 
-.top-menu {
-  background-color: #382d2d;
+#top-menu {
+  background-color: #19191A !important;
 }
 
-.bottom-menu {
-  background-color: #1e1e1e;
+#bottom-menu {
+  background-color: #19191A;
 }
 
 .primary-font {
@@ -218,6 +218,40 @@ button {
 
 .section-item {
   border-radius: 10px;
+}
+
+/* Mobile */
+
+#top-menu .title {
+  
+  color: white;
+  font-size: 22px;
+  font-size: 5vmin;
+  text-align: center;
+}
+
+#top-menu .subtitle {
+  color: white; 
+  font-size: 16px;
+  font-size: 3vmin;
+  text-align: center;
+  margin-bottom: 40px; 
+}
+
+#bottom-menu .about-item {
+  padding: 10px 0px;
+}
+
+#bottom-menu .section {
+  height: 100%;
+  padding: 0px;
+}
+
+#bottom-menu .section-description {
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Used for skip-nav */

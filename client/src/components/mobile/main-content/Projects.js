@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Container } from '@material-ui/core';
-import Repopit from '../../images/repopit-dev-cover.png';
-import OperationPortal from '../../images/operation-portal-cover.png';
-import FocusPocus from '../../images/focus-pocus-cover.png';
-import AntiBody from '../../images/anti-body.png';
+import Repopit from 'images/repopit-dev-cover.png';
+import OperationPortal from 'images/operation-portal-cover2.png';
+import FocusPocus from 'images/focus-pocus-cover.png';
+import AntiBody from 'images/anti-body.png';
 import { SectionContainer, SectionHeader, SectionItem, LinkWrapper as LW} from '../sub-components/index.js';
-import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../SvgIcons.js';
+import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../../SvgIcons.js';
 
 export default function Projects() {
     return (

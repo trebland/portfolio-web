@@ -26,8 +26,9 @@ const textStyles = {
     width: '100%',
     marginBottom: '20px'
   },
-  descriptionContentLeft: {
-    textAlign: 'left', 
+  descriptionContentOverview: {
+    textAlign: 'left',
+    padding: '20px' 
   },
   descriptionContentRight: {
     textAlign: 'right', 
@@ -44,17 +45,23 @@ const textStyles = {
 // date: date the project was released
 
 const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position}) => (
-    <Grid container item direction={position%2 ? "row" : "row-reverse"} justify="center" alignItems="center" xs={9} spacing={3} className="section-item tertiary-color">
-      <Grid container item direction="column" justify="center" alignItems="center"xs={12} sm={6}>            
-        <ImageText internalLink={internalLink} title={title}>
-          <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
-              <img style={imageStyles.coverStyle} src={img} alt="Placeholder Text"/>            
-          </Grid>
-        </ImageText>
+    <Grid container item direction="column" justify="center" alignItems="center" xs={9} className="section-item">
+      <Grid container item direction="column" justify="center" alignItems="center"xs={12}>
+        <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
+            <img style={imageStyles.coverStyle} src={img} alt="Placeholder Text"/>            
+        </Grid>
       </Grid>
       <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
     </Grid>
 )
+
+// Intended to be used in a future version
+// const ImageText = ({title, internalLink, children}) => (
+//     <div style={imageStyles.coverStyle} className="img__wrap">
+//       <div className="img__img">{children}</div>
+//       <a style={{borderRadius: '20px'}} href={internalLink} className="img__description img__text">Read more about {title}</a>
+//     </div>
+// )
 
 // Takes the following parameters to construct successfully
 // title: Title of the project
@@ -66,7 +73,7 @@ const SectionItem = ({img, title, internalLink, contributors, technologies, live
 // position: Whether the content should appear on the left or right side of the page
 
 const SectionDescription = ({title, contributors, technologies, liveLinks, sourceLink, date, position}) => (      
-  <Grid style={position%2 ? textStyles.descriptionContentLeft : textStyles.descriptionContentRight} container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>         
+  <Grid className="section-description tertiary-color" style={textStyles.descriptionContentOverview} container item direction="column" justify="center" alignItems="center" xs={12}>         
     <div className="title" style={textStyles.descriptionTitle}>{title}</div>
     <div style={textStyles.descriptionContent}><CreditContainer>{contributors.map(contributor => (<div className="contributor" key={contributor}>{contributor}</div>))}</CreditContainer></div>
     <div style={textStyles.descriptionContent}>{technologies ? <TechnologyContainer>{technologies}</TechnologyContainer> : <></>}</div>
@@ -97,7 +104,7 @@ const DateContainer = ({children}) => (
 )
 
 const LinkAndSourceContainer = ({position, children}) => (
-  <Grid container item direction={position%2 ? "row" : "row-reverse"} justify="flex-start" alignItems="center" spacing={9}>
+  <Grid container item direction="row" justify="flex-start" alignItems="center" spacing={4}>
     {children}
   </Grid>
 )
@@ -114,13 +121,6 @@ const SourceContainer = ({children}) => (
     <h4 className="caption">Source</h4>
     {children}
   </Grid>
-)
-
-const ImageText = ({title, internalLink, children}) => (
-    <div style={imageStyles.coverStyle} className="img__wrap">
-      <div className="img__img">{children}</div>
-      <a style={{borderRadius: '20px'}} href={internalLink} className="img__description img__text">Read more about {title}</a>
-    </div>
 )
 
 export default SectionItem

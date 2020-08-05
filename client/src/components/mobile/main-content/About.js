@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid, Container } from '@material-ui/core';
-import AboutCover from '../../images/about-background2.jpg';
-import ColgateCover from '../../images/colgate-trevor.jpg';
+import AboutCover from 'images/about-background2.jpg';
+import ColgateCover from 'images/colgate-trevor.jpg';
 import { SectionContainer, SectionHeader, SectionItem, LinkWrapper as LW} from '../sub-components/index.js';
-import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../SvgIcons.js';
+import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../../SvgIcons.js';
 
 const imageStyles = {
   coverStyle: {
@@ -23,18 +23,12 @@ export default function About() {
         <div id="About">
             <Grid container item direction="column" justify="flex-start" alignItems="flex-start">
               <SectionContainer>
-                <Grid container item direction="row" justify="center" alignItems="center" xs={9} spacing={3} style={{padding: 40}} className="section-item tertiary-color">
+                <Grid container item direction="row" justify="center" alignItems="center" xs={9} style={{padding: 40}} className="section-item tertiary-color">
                   <Grid container item direction="column" justify="flex-start" alignItems="center">
-                    <div className="caption" style={{fontSize: 36}}>Fullstack, Game, and Mobile Application Developer.</div>
-                    <span style={{fontSize: 24}}>Traveling, Competitive Gaming, Gardening, Modeling, and Voice Acting.</span>
-                  </Grid>
-                  <Grid container item direction="row" justify="flex-start" alignItems="center" spacing={3}>
-                    <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
-                      <span style={{fontSize: 22, lineHeight: 1.8}}>I studied at Hillsborough Community College, University of Central Florida, and then a brief semester abroad at The Hong Kong Polytechnic University. Throughout my studies I found passion in new hobbies and learned how to learn. The new experiences, people, and places that I've encountered help me to become the person I am today.</span>
-                    </Grid>
-                    <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
-                      <img style={imageStyles.coverStyle} src={AboutCover}></img>
-                    </Grid>
+                    <div className="about-item" className="caption" style={{fontSize: 24}}>Fullstack, Game, and Mobile Application Developer.</div>
+                    <span className="about-item" style={{fontSize: 16}}>Traveling, Competitive Gaming, Gardening, Modeling, and Voice Acting.</span>
+                    <span className="about-item" style={{fontSize: 14, lineHeight: 1.4}}>I studied at Hillsborough Community College, University of Central Florida, and then a brief semester abroad at The Hong Kong Polytechnic University. Throughout my studies I found passion in new hobbies and learned how to learn. The new experiences, people, and places that I've encountered help me to become the person I am today.</span>
+                    <img className="about-item" style={imageStyles.coverStyle} src={AboutCover}></img>
                   </Grid>
                 </Grid>
               </SectionContainer>
