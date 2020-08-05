@@ -15,6 +15,17 @@ const imageStyles = {
 }
 
 const textStyles = {
+  descriptionTitle: {
+    color: 'white', 
+    fontSize: 28, 
+    marginBottom: '20px'
+  },
+  descriptionContent: {
+    color: 'white', 
+    fontSize: 20,
+    width: '100%',
+    marginBottom: '20px'
+  },
   descriptionContentLeft: {
     textAlign: 'left', 
   },
@@ -32,8 +43,8 @@ const textStyles = {
 // externalLinks: List of external links, linking to live project locations
 // date: date the project was released
 
-const SectionItem = ({img, title, internalLink, position, children}) => (
-    <Grid container className={"segment secondary-font"} item direction={position%2 ? "row" : "row-reverse"} justify="center" alignItems="center" spacing={3}>
+const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position}) => (
+    <Grid container item direction={position%2 ? "row" : "row-reverse"} justify="center" alignItems="center" spacing={3}>
       <Grid container item direction="column" justify="center" alignItems="center"xs={12} sm={6}>            
         <ImageText internalLink={internalLink} title={title}>
           <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
@@ -41,10 +52,68 @@ const SectionItem = ({img, title, internalLink, position, children}) => (
           </Grid>
         </ImageText>
       </Grid>
-      <Grid style={position%2 ? textStyles.descriptionContentLeft : textStyles.descriptionContentRight} container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>        
-        {children}
-      </Grid>
+      <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
     </Grid>
+)
+
+// Takes the following parameters to construct successfully
+// title: Title of the project
+// contributors: List of names of those who contributed to the project (must be array type)
+// date: date the project was released
+// technologies: List of technology icons that the project is composed of (optional)
+// liveLinks: List of external links to live project locations (optional)
+// sourceLink: Github link (or other code repository link) (optional)
+// position: Whether the content should appear on the left or right side of the page
+
+const SectionDescription = ({title, contributors, technologies, liveLinks, sourceLink, date, position}) => (      
+  <Grid style={position%2 ? textStyles.descriptionContentLeft : textStyles.descriptionContentRight} container item direction="column" justify="center" alignItems="center" xs={12} sm={6}>         
+    <div className="title" style={textStyles.descriptionTitle}>{title}</div>
+    <div style={textStyles.descriptionContent}><CreditContainer>{contributors.map(contributor => (<div className="contributor" key={contributor}>{contributor}</div>))}</CreditContainer></div>
+    <div style={textStyles.descriptionContent}>{technologies ? <TechnologyContainer>{technologies}</TechnologyContainer> : <></>}</div>
+    <div style={textStyles.descriptionContent}><LinkAndSourceContainer position={position}>{liveLinks ? <LinkContainer>{liveLinks}</LinkContainer> : <></>}{sourceLink ? <SourceContainer>{sourceLink}</SourceContainer> : <></>}</LinkAndSourceContainer></div>
+    <div style={textStyles.descriptionContent}><DateContainer>{date}</DateContainer></div>
+  </Grid>
+)
+
+const CreditContainer = ({children}) => (
+    <span className="link-container">
+      <h4 className="caption">Credits</h4>
+      {children}
+    </span>
+)
+  
+const TechnologyContainer = ({children}) => (
+    <span className="link-container">
+      <h4 className="caption">Technologies</h4>
+      {children}
+    </span>
+)
+
+const DateContainer = ({children}) => (
+    <span className="source-container">
+      <h4 className="caption">Released</h4>
+      {children}
+    </span>
+)
+
+const LinkAndSourceContainer = ({position, children}) => (
+  <Grid container item direction={position%2 ? "row" : "row-reverse"} justify="flex-start" alignItems="center" spacing={9}>
+    {children}
+  </Grid>
+)
+
+const LinkContainer = ({children}) => (
+  <Grid item className="link-container">
+    <h4 className="caption">Links</h4>
+    {children}
+  </Grid>
+)
+
+const SourceContainer = ({children}) => (
+  <Grid item className="source-container">
+    <h4 className="caption">Source</h4>
+    {children}
+  </Grid>
 )
 
 const ImageText = ({title, internalLink, children}) => (

@@ -185,14 +185,17 @@ button {
 }
 
 .secondary-color {
+  color: #FFFFFF;
   background-color: #303030;
 }
 
-.accent-color {
+.tertiary-color {
   color: #FFFFFF;
+  background-color: #1e1e1e;
 }
 
 .background-accent {
+  color: #FFFFFF !important;
   background-color: #FF8036 !important;
 
   -webkit-transition: background-color 500ms linear !important;
@@ -209,9 +212,20 @@ button {
 }
 
 .segment {
-  padding: 0px 50px;
-  background-color: #1e1e1e;
   height: 100vh;
+  padding: 0px 50px;
+}
+
+.segment-body {
+  height: 90vh;
+}
+
+.segment-header {
+  height: 10vh;
+}
+
+.segment-item {
+  padding: 0px 50px;
 }
 
 /* Used for skip-nav */
