@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Grid, Hidden } from '@material-ui/core';
-import SideBar from '../header-components/SideBar';
-import MobileSideBar from '../header-components/MobileSideBar';
-import MainContent from '../header-components/MainContent';
-import MobileMainContent from '../header-components/MobileMainContent';
+import SideBar from '../standard/header-components/SideBar';
+import MainContent from '../standard/header-components/MainContent';
+import MobileSideBar from '../mobile/header-components/MobileSideBar';
+import MobileMainContent from '../mobile/header-components/MobileMainContent';
 
 export default function Dashboard() {
     return (
@@ -14,19 +14,19 @@ export default function Dashboard() {
                 <meta name="description" content="" />
             </Helmet>
             <React.Fragment>
-            <Grid container direction="row" justify="flex-start" alignItems="flex-start">
 
                 <Hidden only={['xs', 'sm', 'md']}>
-                    <SideBar />
-                    <MainContent />
+                    <Grid container direction="row" justify="flex-start" alignItems="flex-start">
+                            <SideBar />
+                            <MainContent />
+                    </Grid>
                 </Hidden>
-                
+
                 <Hidden only={['lg', 'xl']}>
                     <MobileSideBar />
                     <MobileMainContent />
                 </Hidden>
-
-            </Grid>
+                
             </React.Fragment>
         </div>
     );
