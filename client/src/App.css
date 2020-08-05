@@ -48,7 +48,7 @@ h4 {
   font-family: 'Arvo', serif;
 }
 
-.segment .title {
+.section .title {
   font-style: italic;
   font-weight: 700;
 }
@@ -211,21 +211,13 @@ button {
   font-size: 28px;
 }
 
-.segment {
+.section {
   height: 100vh;
   padding: 0px 50px;
 }
 
-.segment-body {
-  height: 90vh;
-}
-
-.segment-header {
-  height: 10vh;
-}
-
-.segment-item {
-  padding: 0px 50px;
+.section-item {
+  border-radius: 10px;
 }
 
 /* Used for skip-nav */

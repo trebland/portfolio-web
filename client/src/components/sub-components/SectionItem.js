@@ -44,7 +44,7 @@ const textStyles = {
 // date: date the project was released
 
 const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position}) => (
-    <Grid container item direction={position%2 ? "row" : "row-reverse"} justify="center" alignItems="center" spacing={3}>
+    <Grid container item direction={position%2 ? "row" : "row-reverse"} justify="center" alignItems="center" xs={9} spacing={3} className="section-item tertiary-color">
       <Grid container item direction="column" justify="center" alignItems="center"xs={12} sm={6}>            
         <ImageText internalLink={internalLink} title={title}>
           <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
