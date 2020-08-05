@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import ProfilePhoto from '../../images/headshot.jpg';
-import IconButton from '@material-ui/core/IconButton';
 import { Email, GitHub, LinkedIn, ExpandMore } from '@material-ui/icons';
 import { useDispatch } from "react-redux";
 import { selectPage } from "../../redux/actions/pageActions";
@@ -49,12 +48,13 @@ export function SideBar() {
                 <div className="primary-font" style={textStyles.profileTitle}>Trevor Bland</div>
                 <div className="primary-font" style={textStyles.profileSubTitle}>Computer Scientist</div>
             </Grid>
+
             <Grid container item direction="column" justify="flex-start" alignItems="flex-start" style={{paddingLeft: 40}} xs>
                 <button onClick={() => dispatch(selectPage("About"))} id="About" className="nav-link primary-font">About</button>
                 <button onClick={() => dispatch(selectPage("Projects"))} id="Projects" className="nav-link primary-font">Projects</button>
-                <button onClick={() => dispatch(selectPage("Modeling"))} id="Modeling" className="nav-link primary-font">Modeling</button>
                 <a href={ResumePdf} id="Resume" className="nav-link primary-font">Resume</a>
             </Grid>
+
             <Grid container item direction="row" justify="space-around" alignItems="center" xs>
               <a href="mailto:bland.trevor96@gmail.com" className="nav-link"><Email style={iconStyles.email} /></a>
               <a target="_blank" rel="noreferrer noopener" href="https://linkedin.com/in/trevor-bland-94b2941b4/" className="nav-link"><LinkedIn style={iconStyles.linkedIn} /></a>

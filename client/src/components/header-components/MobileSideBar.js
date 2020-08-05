@@ -8,11 +8,6 @@ import ProfilePhoto from '../../images/headshot.jpg';
 import { Email } from '@material-ui/icons';
 
 const imageStyles = {
-    coverStyle: {
-      // Left-Image
-      maxWidth: '100%',
-      maxHeight: '80vh'
-    },
     profile: {
       width: '50%',
       borderRadius: '50%',
