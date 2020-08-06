@@ -24,16 +24,16 @@ export default function About() {
             <Grid container item direction="column" justify="flex-start" alignItems="flex-start">
               <SectionContainer>
                 <Grid container item direction="row" justify="center" alignItems="center" xs={9} style={{padding: 40}} className="section-item tertiary-color">
-                  <Grid container item direction="column" justify="flex-start" alignItems="center">
-                    <div className="caption" style={{fontSize: 36}}>Fullstack, Game, and Mobile Application Developer.</div>
-                    <span style={{fontSize: 24}}>Traveling, Competitive Gaming, Gardening, Modeling, and Voice Acting.</span>
+                  <Grid container item direction="column" justify="flex-start" alignItems="center" style={{paddingBottom: 20}}>
+                    <h1 className="about-item caption">Fullstack, Game, and Mobile Application Developer.</h1>
+                    <h4 className="about-item">Traveling, Competitive Gaming, Gardening, Modeling, and Voice Acting.</h4>
                   </Grid>
                   <Grid container item direction="row" justify="flex-start" alignItems="center" spacing={3}>
                     <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
                       <span style={{fontSize: 22, lineHeight: 1.8}}>I studied at Hillsborough Community College, University of Central Florida, and then a brief semester abroad at The Hong Kong Polytechnic University. Throughout my studies I found passion in new hobbies and learned how to learn. The new experiences, people, and places that I've encountered help me to become the person I am today.</span>
                     </Grid>
                     <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
-                      <img style={imageStyles.coverStyle} src={AboutCover}></img>
+                      <img style={imageStyles.coverStyle} src={AboutCover} alt={"The Hong Kong Polytechnic University Student Group"}></img>
                     </Grid>
                   </Grid>
                 </Grid>

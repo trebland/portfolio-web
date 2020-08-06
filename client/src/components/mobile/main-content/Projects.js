@@ -13,7 +13,7 @@ export default function Projects() {
             <Grid container item direction="column" justify="flex-start" alignItems="center">
               
                 <SectionContainer>
-                    <h2><SectionHeader headerTitle={"Latest Development"} linkDestination={"/fullstack"}/></h2>
+                    <SectionHeader headerTitle={"Latest Development"} linkDestination={"/fullstack"}/>
                     <SectionItem img={Repopit} title={"Repopit.dev"} internalLink={"/projects/repopit"} contributors={["Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
                         liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW isGithub={true} link={"portfolio-web"}><GithubIcon /></LW>} 
@@ -21,7 +21,7 @@ export default function Projects() {
                 </SectionContainer>
 
                 <SectionContainer>
-                    <h2><SectionHeader headerTitle={"Full Stack"} linkDestination={"/fullstack"}/></h2>
+                    <SectionHeader headerTitle={"Full Stack"} linkDestination={"/fullstack"}/>
                     <SectionItem img={OperationPortal} title={"Operation Portal"} internalLink={"/projects/repopit"}
                         contributors={["Thomas Anchor","Scott Lee","Baldwin Suen","Jacqueline Van Der Meulen","Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><DotNetIcon /><PostgreSqlIcon /><ReactIcon /><FlutterIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
@@ -31,7 +31,7 @@ export default function Projects() {
                 </SectionContainer>
 
                 <SectionContainer>
-                    <h2><SectionHeader headerTitle={"Mobile Applications"} linkDestination={"/mobile"}/></h2>
+                    <SectionHeader headerTitle={"Mobile Applications"} linkDestination={"/mobile"}/>
                     <SectionItem img={FocusPocus} title={"Focus Pocus"} internalLink={"/projects/repopit"} position={3}
                         contributors={["Phillip Tat", "Zachary Arehart", "Rob Lee", "Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><MongoDbIcon /><ExpressIcon /><ReactIcon /><NodeJsIcon /><FlutterIcon /><AwsIcon /></span>}
@@ -40,7 +40,7 @@ export default function Projects() {
                 </SectionContainer>
 
                 <SectionContainer>
-                    <h2><SectionHeader headerTitle={"Games"} linkDestination={"/games"}/></h2>
+                    <SectionHeader headerTitle={"Games"} linkDestination={"/games"}/>
                     <SectionItem img={AntiBody} title={"Anti-Body"} internalLink={"/projects/repopit"} position={4} 
                         contributors={["David Lopez", "Trevor Bland", "Joseph Peaden", "Stephanie Peaden", "Chris Peaden", "Zachary Goodless"]}
                         technologies={<span><UnityIcon /><CSharpIcon /></span>} 

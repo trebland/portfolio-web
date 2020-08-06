@@ -2,10 +2,22 @@
   text-align: center;
 }
 
+h1 {
+  margin: 0px;
+}
+
+h2 {
+  margin: 0px;
+}
+
+h3 {
+  margin: 0px;
+}
+
 h4 {
+  margin: 0px;
   font-family: 'Arvo', serif;
   font-size: 24px;
-  margin: 0;
 }
 
 .segment.background {
@@ -208,6 +220,8 @@ button {
 }
 
 .header {
+  color: #0B67C2;
+  font-family: 'Arvo', serif;
   font-size: 28px;
 }
 
@@ -220,13 +234,21 @@ button {
   border-radius: 10px;
 }
 
+.title {
+  color: white;
+}
+
+.subtitle {
+  color: white;
+}
+
 /* Mobile */
 
 #top-menu .title {
   
   color: white;
   font-size: 22px;
-  font-size: 5vmin;
+  font-size: 4vmin;
   text-align: center;
 }
 
@@ -252,6 +274,11 @@ button {
   padding: 0px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#bottom-menu .header {
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 /* Used for skip-nav */

@@ -34,8 +34,8 @@ export function SideBar() {
         <Grid container direction="row" justify="center" alignItems="center">
             <Grid container item direction="column" justify="flex-start" alignItems="center" style={{paddingTop: '20px'}} xs>
                 <img style={imageStyles.profile} src={ProfilePhoto} alt="Placeholder Text" />
-                <div className="primary-font title">Trevor Bland</div>
-                <div className="primary-font subtitle">Computer Scientist</div>
+                <h2 className="primary-font title">Trevor Bland</h2>
+                <h3 className="primary-font subtitle">Computer Scientist</h3>
             </Grid>
 
             <Grid container item direction="column" justify="center" alignItems="center" xs>
@@ -45,9 +45,9 @@ export function SideBar() {
             </Grid>
         </Grid>
         <Grid container item direction="row" justify="space-around" alignItems="center" xs>
-            <a href="mailto:bland.trevor96@gmail.com" className="nav-link"><Email style={iconStyles.email} /></a>
-            <a target="_blank" rel="noreferrer noopener" href="https://linkedin.com/in/trevor-bland-94b2941b4/" className="nav-link"><LinkedIn style={iconStyles.linkedIn} /></a>
-            <a target="_blank" rel="noreferrer noopener" href="https://github.com/trebland" className="nav-link"><GitHub style={iconStyles.github} /></a>
+            <a aria-label="Email Link" href="mailto:bland.trevor96@gmail.com" className="nav-link"><Email style={iconStyles.email} /></a>
+            <a aria-label="LinkedIn Link" target="_blank" rel="noreferrer noopener" href="https://linkedin.com/in/trevor-bland-94b2941b4/" className="nav-link"><LinkedIn style={iconStyles.linkedIn} /></a>
+            <a aria-label="GitHub Link" target="_blank" rel="noreferrer noopener" href="https://github.com/trebland" className="nav-link"><GitHub style={iconStyles.github} /></a>
         </Grid>
     </div>
   )

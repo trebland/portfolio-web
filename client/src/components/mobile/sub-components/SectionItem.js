@@ -48,7 +48,7 @@ const SectionItem = ({img, title, internalLink, contributors, technologies, live
     <Grid container item direction="column" justify="center" alignItems="center" xs={9} className="section-item">
       <Grid container item direction="column" justify="center" alignItems="center"xs={12}>
         <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
-            <img style={imageStyles.coverStyle} src={img} alt="Placeholder Text"/>            
+            <img style={imageStyles.coverStyle} src={img} alt={title}/>            
         </Grid>
       </Grid>
       <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
