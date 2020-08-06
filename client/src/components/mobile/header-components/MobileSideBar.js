@@ -6,24 +6,12 @@ import { useDispatch } from "react-redux";
 import { selectPage } from "redux/actions/pageActions";
 import ResumePdf from 'TrevorBland_Resume.pdf'
 
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
 const imageStyles = {
     profile: {
       width: '100px',
       height: '100px',
       borderRadius: '50%'
     }
-  }
-
-const textStyles = {
-    
 }
 
 const iconStyles = {
@@ -44,16 +32,16 @@ export function SideBar() {
   return (
     <div id="top-menu" >
         <Grid container direction="row" justify="center" alignItems="center">
-            <Grid container item direction="column" justify="flex-start" alignItems="center" xs>
+            <Grid container item direction="column" justify="flex-start" alignItems="center" style={{paddingTop: '20px'}} xs>
                 <img style={imageStyles.profile} src={ProfilePhoto} alt="Placeholder Text" />
                 <div className="primary-font title">Trevor Bland</div>
                 <div className="primary-font subtitle">Computer Scientist</div>
             </Grid>
 
-            <Grid container item direction="column" justify="center" alignItems="center" style={{paddingLeft: 40}} xs>
-                <button onClick={() => dispatch(selectPage("About"))} id="About" className="nav-link primary-font">About</button>
-                <button onClick={() => dispatch(selectPage("Projects"))} id="Projects" className="nav-link primary-font">Projects</button>
-                <a href={ResumePdf} id="Resume" className="nav-link primary-font">Resume</a>
+            <Grid container item direction="column" justify="center" alignItems="center" xs>
+                <button onClick={() => dispatch(selectPage("About"))} id="About__button" className="nav-link primary-font">About</button>
+                <button onClick={() => dispatch(selectPage("Projects"))} id="Projects__button" className="nav-link primary-font">Projects</button>
+                <a href={ResumePdf} id="Resume__button" className="nav-link primary-font">Resume</a>
             </Grid>
         </Grid>
         <Grid container item direction="row" justify="space-around" alignItems="center" xs>
