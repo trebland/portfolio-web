@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Container } from '@material-ui/core';
-import AboutCover from 'images/about-background2.jpg';
+import AboutCover from 'images/profile-photo.jpg';
 import ColgateCover from 'images/colgate-trevor.jpg';
 import { SectionContainer, SectionHeader, SectionItem, LinkWrapper as LW} from '../sub-components/index.js';
 import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../../SvgIcons.js';
@@ -30,10 +30,10 @@ export default function About() {
                   </Grid>
                   <Grid container item direction="row" justify="flex-start" alignItems="center" spacing={3}>
                     <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
-                      <span className="about-item body">I studied at Hillsborough Community College, University of Central Florida, and The Hong Kong Polytechnic University. The ability to study at multiple universities improved my critical thinking; as a result, this allowed me to see that if you maintain a closed mindset, then you'll never know what you don't know.</span>
+                      <img style={imageStyles.coverStyle} src={AboutCover} alt={"The Hong Kong Polytechnic University Student Group"}></img>
                     </Grid>
                     <Grid container item direction="column" justify="flex-start" alignItems="center" xs={6}>
-                      <img style={imageStyles.coverStyle} src={AboutCover} alt={"The Hong Kong Polytechnic University Student Group"}></img>
+                      <span className="about-item body">I studied at Hillsborough Community College, University of Central Florida, and The Hong Kong Polytechnic University. The ability to study at multiple universities improved my critical thinking; as a result, this allowed me to see that if you maintain a closed mindset, then you'll never know what you don't know.</span>
                     </Grid>
                   </Grid>
                 </Grid>

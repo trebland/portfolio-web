@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Container } from '@material-ui/core';
-import AboutCover from 'images/about-background2.jpg';
+import AboutCover from 'images/profile-photo.jpg';
 import ColgateCover from 'images/colgate-trevor.jpg';
 import { SectionContainer, SectionHeader, SectionItem, LinkWrapper as LW} from '../sub-components/index.js';
 import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../../SvgIcons.js';
@@ -26,8 +26,8 @@ export default function About() {
                   <Grid className="section-item tertiary-color" style={{padding: 40}} container item direction="column" justify="flex-start" alignItems="center">
                     <h1 className="about-item caption">Fullstack, Game, and Mobile Application Developer.</h1>
                     <h2 className="about-item">Traveling, Competitive Gaming, and Gardening</h2>
-                    <span className="about-item" style={{fontSize: 14, lineHeight: 1.4}}>I studied at Hillsborough Community College, University of Central Florida, and then a brief semester abroad at The Hong Kong Polytechnic University. Throughout my studies I found passion in new hobbies and learned how to learn. The new experiences, people, and places that I've encountered help me to become the person I am today.</span>
                     <img style={imageStyles.coverStyle} src={AboutCover} alt={"The Hong Kong Polytechnic University Student Group"}></img>
+                    <span className="about-item" style={{fontSize: 14, lineHeight: 1.4}}>I studied at Hillsborough Community College, University of Central Florida, and then a brief semester abroad at The Hong Kong Polytechnic University. Throughout my studies I found passion in new hobbies and learned how to learn. The new experiences, people, and places that I've encountered help me to become the person I am today.</span>
                   </Grid>
               </SectionContainer>
               {/* 
