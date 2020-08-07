@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-const SectionContainer = ({children}) => (
-    <Grid container item direction={"column"} justify="center" alignItems="center" className="section secondary-font">
+const SectionContainer = ({fullHeight, children}) => (
+    <Grid container item direction={"column"} justify="center" alignItems="center" className={"section secondary-font" + (fullHeight ? " full-height" : "")}>
         {children}
     </Grid>
 )

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Button } from '@material-ui/core';
 
 const SectionHeader = ({headerTitle, linkDestination}) => (
-  <Grid container item direction="row" justify="center" alignItems="center" className="secondary-font">
+  <Grid container item direction="row" justify="center" alignItems="center" className="header secondary-font">
       <h2 className="button__text header">{headerTitle}</h2>
   </Grid>
 )

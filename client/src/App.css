@@ -53,7 +53,7 @@ h4 {
 }
 
 .primary-font {
-  font-family: 'Audiowide', cursive;
+  font-family: 'Arvo', serif;
 }
 
 .secondary-font {
@@ -66,7 +66,7 @@ h4 {
 }
 
 .caption {
-  color: #FF8036;
+  color: #FF8945;
   padding-bottom: 5px;
 }
 
@@ -151,6 +151,10 @@ h4 {
   transition: opacity .3s, visibility .3s;
 }
 
+a {
+  color: #8ebf42;
+}
+
 a.img__description:hover {
   color: white;
   text-decoration: none;
@@ -219,14 +223,18 @@ button {
   background-color: #FF9C63 !important;
 }
 
+.full-height {
+  height: 100vh;
+}
+
 .header {
   color: #0B67C2;
   font-family: 'Arvo', serif;
   font-size: 28px;
+  padding: 20px 0px;
 }
 
 .section {
-  height: 100vh;
   padding: 0px 50px;
 }
 
@@ -234,15 +242,25 @@ button {
   border-radius: 10px;
 }
 
-.title {
-  color: white;
+.about-item.title{
+  color: #FF8945;
+  font-size: 2.5vmin;
 }
 
-.subtitle {
-  color: white;
+.about-item.subtitle{
+  font-size: 2vmin;
+}
+
+#right-menu .about-item.body{
+  font-size: 2vmin;
+  line-height: 5vmin;
 }
 
 /* Mobile */
+
+.white {
+  color: white;
+}
 
 #top-menu .title {
   

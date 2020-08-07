@@ -45,8 +45,8 @@ export function SideBar() {
         <Grid container direction="column" justify="flex-start" alignItems="center" spacing={3}>
             <Grid container item direction="column" justify="flex-start" alignItems="center" xs>
             <img style={imageStyles.profile} src={ProfilePhoto} alt="Trevor Bland" />
-                <h2 className="primary-font title">Trevor Bland</h2>
-                <h3 className="primary-font subtitle">Computer Scientist</h3>
+                <h2 className="primary-font white">Trevor Bland</h2>
+                <h3 className="primary-font white">Computer Scientist</h3>
             </Grid>
 
             <Grid container item direction="column" justify="flex-start" alignItems="flex-start" style={{paddingLeft: 40}} xs>
