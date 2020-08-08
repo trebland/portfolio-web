@@ -33,15 +33,14 @@ export function SideBar() {
     <div id="top-menu" >
         <Grid container direction="row" justify="center" alignItems="center">
             <Grid container item direction="column" justify="flex-start" alignItems="center" style={{paddingTop: '20px'}} xs>
-                <img style={imageStyles.profile} src={ProfilePhoto} alt="Placeholder Text" />
-                <h2 className="primary-font title">Trevor Bland</h2>
+                <h2 className="primary-font title orange">Trevor Bland</h2>
                 <h3 className="primary-font subtitle">Computer Scientist</h3>
             </Grid>
 
             <Grid container item direction="column" justify="center" alignItems="center" xs>
-                <button onClick={() => dispatch(selectPage("About"))} id="About__button" className="nav-link primary-font">About</button>
-                <button onClick={() => dispatch(selectPage("Projects"))} id="Projects__button" className="nav-link primary-font">Projects</button>
-                <a href={ResumePdf} id="Resume__button" className="nav-link primary-font">Resume</a>
+                <a id="About__button" href={"/#about"} className="nav-link primary-font">About</a>
+                <a id="Projects__button" href={"/#projects"} className="nav-link primary-font">Projects</a>
+                <a id="Resume__button" href={ResumePdf} className="nav-link primary-font">Resume</a>
             </Grid>
         </Grid>
         <Grid container item direction="row" justify="space-around" alignItems="center" xs>

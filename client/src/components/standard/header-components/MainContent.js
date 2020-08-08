@@ -8,10 +8,9 @@ export default function MainContent() {
   const page = useSelector(state => state.response.page);
 
     return (
-        <div id="right-menu">
-            {page === "About" ? <About />
-              : (page === "Projects" ? <Projects />
-              : <Modeling />)}
+        <div id="right-menu" style={{paddingBottom: 40}}>
+          <About />
+          <Projects />
         </div>
     )
 }

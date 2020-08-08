@@ -9,9 +9,8 @@ export default function MobileMainContent() {
 
     return (
         <div id="bottom-menu">
-            {page === "About" ? <About />
-              : (page === "Projects" ? <Projects />
-              : <Modeling />)}
+            <About />
+            <Projects />
         </div>
     )
 }

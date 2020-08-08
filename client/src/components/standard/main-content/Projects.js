@@ -9,7 +9,7 @@ import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNet
 
 export default function Projects() {
     return (
-        <div id="Projects">
+        <div id="projects">
             <Grid container item direction="column" justify="flex-start" alignItems="center">
               
                 <SectionContainer>
