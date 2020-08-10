@@ -234,6 +234,7 @@ button {
 
 .section {
   padding: 0px 50px;
+  max-width: 100%;
 }
 
 .section-item {
