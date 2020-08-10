@@ -5,14 +5,9 @@ import { SectionContainer } from '../sub-components/index.js';
 
 const imageStyles = {
   coverStyle: {
-    // Left-Image
     maxWidth: '100%',
     maxHeight: '50vh',
     borderRadius: '20px',
-  },
-  profile: {
-    width: '100%',
-    borderRadius: '50%'
   }
 }
 
@@ -36,29 +31,6 @@ export default function About() {
                   </Grid>
                 </Grid>
               </SectionContainer>
-              {/* 
-              <SectionContainer>
-                  <h2><SectionHeader headerTitle={"Modeling"} linkDestination={"/fullstack"}/></h2>
-                  <SectionItem img={<></>} title={"Repopit.dev"} internalLink={"/projects/repopit"} contributors={["Trevor Bland"]} 
-                      technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
-                      liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW link={"portfolio-web"}><GithubIcon /></LW>} 
-                      date={"August 2020"} position={1}/>
-              </SectionContainer>
-              <SectionContainer>
-                    <h2><SectionHeader headerTitle={"Competitive Gaming"} linkDestination={"/fullstack"}/></h2>
-                    <SectionItem img={<></>} title={"Repopit.dev"} internalLink={"/projects/repopit"} contributors={["Trevor Bland"]} 
-                        technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
-                        liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW link={"portfolio-web"}><GithubIcon /></LW>} 
-                        date={"August 2020"} position={1}/>
-                </SectionContainer>
-                <SectionContainer>
-                    <h2><SectionHeader headerTitle={"Traveler"} linkDestination={"/fullstack"}/></h2>
-                    <SectionItem img={<></>} title={"Repopit.dev"} internalLink={"/projects/repopit"} contributors={["Trevor Bland"]} 
-                        technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
-                        liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW link={"portfolio-web"}><GithubIcon /></LW>} 
-                        date={"August 2020"} position={1}/>
-                </SectionContainer> 
-                */}
             </Grid>
         </div>
     )
