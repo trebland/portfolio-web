@@ -44,14 +44,19 @@ const textStyles = {
 // externalLinks: List of external links, linking to live project locations
 // date: date the project was released
 
-const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position}) => (
+const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position, children}) => (
     <Grid container item direction="column" justify="center" alignItems="center" xs={9} className="section-item">
       <Grid container item direction="column" justify="center" alignItems="center"xs={12}>
         <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
             <img style={imageStyles.coverStyle} src={img} alt={title}/>            
         </Grid>
       </Grid>
-      <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
+      <Grid item className="section-item tertiary-color" style={{margin: '10px 0px'}}>
+        <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
+        <Grid item style={{padding: '5%'}}>
+          {children}
+        </Grid>
+      </Grid>
     </Grid>
 )
 

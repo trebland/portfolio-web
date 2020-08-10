@@ -27,7 +27,7 @@ export default function About() {
                     <h1 className="about-item caption">Fullstack, Game, and Mobile Application Developer.</h1>
                     <h2 className="about-item">Traveler, Competitive Gamer, and Gardener.</h2>
                     <img style={imageStyles.coverStyle} src={AboutCover} alt={"The Hong Kong Polytechnic University Student Group"}></img>
-                    <span className="about-item" style={{fontSize: 14, lineHeight: 1.4}}>I studied at Hillsborough Community College, University of Central Florida, and then a brief semester abroad at The Hong Kong Polytechnic University. Throughout my studies I found passion in new hobbies and learned how to learn. The new experiences, people, and places that I've encountered help me to become the person I am today.</span>
+                    <span className="about-item" style={{lineHeight: 1.4}}>I studied at Hillsborough Community College, University of Central Florida, and then a brief semester abroad at The Hong Kong Polytechnic University. Throughout my studies I found passion in new hobbies and learned how to learn. The new experiences, people, and places that I've encountered help me to become the person I am today.</span>
                   </Grid>
               </SectionContainer>
               {/* 

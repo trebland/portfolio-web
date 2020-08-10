@@ -1,6 +1,5 @@
 import React from 'react';
 import About from '../main-content/About';
-import Modeling from '../main-content/Modeling';
 import Projects from '../main-content/Projects';
 import { useSelector } from "react-redux";
 

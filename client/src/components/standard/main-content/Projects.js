@@ -30,7 +30,7 @@ export default function Projects() {
                         liveLinks={<span><LW isAndroid={true} link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW isApple={true} link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW><LW link={"https://www.operation-portal.com"}><WebIcon /></LW></span>} 
                         sourceLink={<LW isGithub={true} link={"OperationPortal"}><GithubIcon /></LW>} 
                         date={"April 2020"} position={2}>
-                            A Mobile-Web application designed to improve Orlando Childrens Church ability to help at risk youth. Operation Portal helps their Saturday routines, giving them the ability to help more feed and care for more kids during their volunteer routine. Please visit <LW link="http://orlandochildrenschurch.org/">Orlando Children's Church</LW> if you'd like to contribute to their cause.
+                            A Mobile-Web application designed to improve Orlando Childrens Church ability to help at risk youth. Operation Portal helps their Saturday routines, giving them the ability to help feed and care for more kids during their volunteer routine. Please visit <LW link="http://orlandochildrenschurch.org/">Orlando Children's Church</LW> if you'd like to contribute to their cause.
                     </SectionItem>
                 </SectionContainer>
 
