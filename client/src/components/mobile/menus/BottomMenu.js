@@ -4,7 +4,7 @@ import Projects from '../main-content/Projects';
 
 export default function MobileMainContent() {
     return (
-        <div id="bottom-menu" style={{paddingBottom: 40}}>
+        <div id="bottom-menu">
             <About />
             <Projects />
         </div>
