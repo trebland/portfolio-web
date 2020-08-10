@@ -45,11 +45,7 @@ const textStyles = {
 
 const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position, children}) => (
     <Grid container item direction="column" justify="center" alignItems="center" className="section-item">
-<<<<<<< HEAD
       <Grid container item direction="column" justify="center" alignItems="center" xs={12}>
-=======
-      <Grid container item direction="column" justify="center" alignItems="center"xs={12}>
->>>>>>> bad851b387719836ebfb4ea0cc474d098525c696
         <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
             <img style={imageStyles.coverStyle} src={img} alt={title}/>            
         </Grid>
