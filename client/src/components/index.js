@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Grid, Hidden } from '@material-ui/core';
-import SideBar from './standard/menus/SideBar';
-import MainContent from './standard/menus/MainContent';
-import MobileSideBar from './mobile/menus/MobileSideBar';
-import MobileMainContent from './mobile/menus/MobileMainContent';
+import LeftMenu from './standard/menus/LeftMenu';
+import RightMenu from './standard/menus/RightMenu';
+import TopMenu from './mobile/menus/TopMenu';
+import BottomMenu from './mobile/menus/BottomMenu';
 
 export default function Index() {
     return (
@@ -17,14 +17,14 @@ export default function Index() {
 
                 <Hidden only={['xs', 'sm', 'md']}>
                     <Grid container direction="row" justify="flex-start" alignItems="flex-start">
-                            <SideBar />
-                            <MainContent />
+                            <LeftMenu />
+                            <RightMenu />
                     </Grid>
                 </Hidden>
 
                 <Hidden only={['lg', 'xl']}>
-                    <MobileSideBar />
-                    <MobileMainContent />
+                    <TopMenu />
+                    <BottomMenu />
                 </Hidden>
                 
             </React.Fragment>

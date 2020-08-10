@@ -36,7 +36,7 @@ export default function Projects() {
 
                 <SectionContainer>
                     <SectionHeader headerTitle={"Mobile Applications"} linkDestination={"/mobile"}/>
-                    <SectionItem img={FocusPocus} title={"Focus Pocus"} internalLink={"/projects/repopit"} position={3}
+                    <SectionItem img={FocusPocus} title={"Focus Pocus"} internalLink={"/projects/repopit"}
                         contributors={["Phillip Tat", "Zachary Arehart", "Rob Lee", "Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><MongoDbIcon /><ExpressIcon /><ReactIcon /><NodeJsIcon /><FlutterIcon /><AwsIcon /></span>}
                         sourceLink={<LW isGithub={true} link={"FocusPocus"}><GithubIcon /></LW>} 
@@ -47,7 +47,7 @@ export default function Projects() {
 
                 <SectionContainer>
                     <SectionHeader headerTitle={"Games"} linkDestination={"/games"}/>
-                    <SectionItem img={AntiBody} title={"Anti-Body"} internalLink={"/projects/repopit"} position={4} 
+                    <SectionItem img={AntiBody} title={"Anti-Body"} internalLink={"/projects/repopit"}
                         contributors={["David Lopez", "Trevor Bland", "Joseph Peaden", "Stephanie Peaden", "Chris Peaden", "Zachary Goodless"]}
                         technologies={<span><UnityIcon /><CSharpIcon /></span>} 
                         liveLinks={<span><LW link={"https://globalgamejam.org/2018/games/anti-body"}><WebIcon /></LW></span>} 

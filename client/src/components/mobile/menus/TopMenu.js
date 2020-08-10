@@ -3,14 +3,6 @@ import { Grid } from '@material-ui/core';
 import { Email, GitHub, LinkedIn } from '@material-ui/icons';
 import ResumePdf from 'TrevorBland_Resume.pdf'
 
-const imageStyles = {
-    profile: {
-      width: '100px',
-      height: '100px',
-      borderRadius: '50%'
-    }
-}
-
 const iconStyles = {
   email: {
     fontSize: 50,

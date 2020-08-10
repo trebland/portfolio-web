@@ -1,26 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import { Email, GitHub, LinkedIn, ExpandMore } from '@material-ui/icons';
+import { Email, GitHub, LinkedIn } from '@material-ui/icons';
 import ResumePdf from 'TrevorBland_Resume.pdf'
-
-const imageStyles = {
-    profile: {
-      width: '50%',
-      borderRadius: '50%'
-    }
-  }
-
-const textStyles = {
-    profileTitle: {
-      color: 'white', 
-      fontSize: 28, 
-    },
-    profileSubTitle: {
-      color: 'white', 
-      fontSize: 20,
-      marginBottom: '40px' 
-    }
-}
 
 const iconStyles = {
   email: {
