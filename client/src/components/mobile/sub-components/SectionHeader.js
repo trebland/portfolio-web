@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grid, Button } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
-const SectionHeader = ({headerTitle, linkDestination}) => (
+const SectionHeader = ({headerTitle}) => (
   <Grid container item direction="row" justify="center" alignItems="center" className="secondary-font">
       <h2 className="button__text header">{headerTitle}</h2>
   </Grid>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Grid, Hidden } from '@material-ui/core';
-import SideBar from '../standard/header-components/SideBar';
-import MainContent from '../standard/header-components/MainContent';
-import MobileSideBar from '../mobile/header-components/MobileSideBar';
-import MobileMainContent from '../mobile/header-components/MobileMainContent';
+import SideBar from './standard/menus/SideBar';
+import MainContent from './standard/menus/MainContent';
+import MobileSideBar from './mobile/menus/MobileSideBar';
+import MobileMainContent from './mobile/menus/MobileMainContent';
 
-export default function Dashboard() {
+export default function Index() {
     return (
         <div>        
             <Helmet>

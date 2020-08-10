@@ -1,10 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import ProfilePhoto from 'images/headshot.jpg';
 import { Email, GitHub, LinkedIn, ExpandMore } from '@material-ui/icons';
-import { useDispatch } from "react-redux";
-import { selectPage } from "redux/actions/pageActions";
-import ResumePdf from '../../../TrevorBland_Resume.pdf'
+import ResumePdf from 'TrevorBland_Resume.pdf'
 
 const imageStyles = {
     profile: {
@@ -38,8 +35,6 @@ const iconStyles = {
 }
 
 export function SideBar() {
-  const dispatch = useDispatch();
-
   return (
     <div id="left-menu" >
         <Grid container direction="column" justify="flex-start" alignItems="center" spacing={3} style={{height: '100vh'}}>

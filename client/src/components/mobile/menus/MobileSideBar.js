@@ -1,9 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import ProfilePhoto from 'images/headshot.jpg';
-import { Email, GitHub, LinkedIn, ExpandMore } from '@material-ui/icons';
-import { useDispatch } from "react-redux";
-import { selectPage } from "redux/actions/pageActions";
+import { Email, GitHub, LinkedIn } from '@material-ui/icons';
 import ResumePdf from 'TrevorBland_Resume.pdf'
 
 const imageStyles = {
@@ -27,8 +24,6 @@ const iconStyles = {
 }
 
 export function SideBar() {
-  const dispatch = useDispatch();
-
   return (
     <div id="top-menu" >
         <Grid container direction="row" justify="center" alignItems="center">

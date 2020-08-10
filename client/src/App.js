@@ -1,22 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Helmet } from "react-helmet";
 
-import Dashboard from './components/header-directs/Dashboard';
-import NoMatch from './components/NoMatch';
+import Index from './components';
 
 const App = () => (
-	<Router>
-		<div>
-			<main>
-				<Switch>
-					<Route exact path="/" component={Dashboard} />
-					<Route exact path="/resume" component={Dashboard} />
-					<Route component={NoMatch} />
-				</Switch>
-			</main>
-		</div>
-	</Router>
+	<Index />
 );
 
 export default App;

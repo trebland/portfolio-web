@@ -1,9 +1,7 @@
 import React from 'react';
-import { Grid, Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import AboutCover from 'images/profile-photo.jpg';
-import ColgateCover from 'images/colgate-trevor.jpg';
-import { SectionContainer, SectionHeader, SectionItem, LinkWrapper as LW} from '../sub-components/index.js';
-import { HtmlIcon, JsIcon, CssIcon, ReactIcon, ReduxIcon, PostgreSqlIcon, DotNetIcon, FlutterIcon, MaterialUiIcon, AwsIcon, GithubIcon, WebIcon, AndroidIcon, IosIcon, MongoDbIcon, ExpressIcon, NodeJsIcon, CSharpIcon, UnityIcon } from '../../SvgIcons.js';
+import { SectionContainer } from '../sub-components/index.js';
 
 const imageStyles = {
   coverStyle: {

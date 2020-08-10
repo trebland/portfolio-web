@@ -24,13 +24,6 @@ h4 {
   text-align: center;
 }
 
-.segment.background {
-  background-image: url("./images/about-background2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
 #left-menu {
   width: 20%;
   height: 100vh;

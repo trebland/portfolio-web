@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Repopit from 'images/repopit-dev-cover.png';
 import OperationPortal from 'images/operation-portal-cover2.png';
 import FocusPocus from 'images/focus-pocus-cover.png';
