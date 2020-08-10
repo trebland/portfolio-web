@@ -3,8 +3,7 @@ import { Grid } from '@material-ui/core';
 
 const imageStyles = {
     coverStyle: {
-      // Left-Image
-      maxWidth: '100%',
+      maxWidth: '80%',
       maxHeight: '50vh',
       borderRadius: '20px',
     },

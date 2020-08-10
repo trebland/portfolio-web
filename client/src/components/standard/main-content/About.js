@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import AboutCover from 'images/profile-photo.jpg';
+import AboutCover from 'images/profile-photo.png';
 import { SectionContainer } from '../sub-components/index.js';
 
 const imageStyles = {
