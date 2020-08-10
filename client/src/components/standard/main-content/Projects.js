@@ -18,7 +18,7 @@ export default function Projects() {
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
                         liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW isGithub={true} link={"portfolio-web"}><GithubIcon /></LW>} 
                         date={"August 2020"} position={1}>
-                            Its a repository pit! Repopit.dev serves to showcase my projects and provide additional information about me. It is done with the hopes of providing future employers an improved idea on the experiences I have.
+                            Its a REPOsitory PIT! Repopit.dev serves to showcase Trevor Bland's projects and provide additional information about him. This web portfolio serves to inform prospective employers and computer scientists on my prior experiences.
                     </SectionItem>
                 </SectionContainer>
 

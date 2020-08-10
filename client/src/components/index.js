@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Grid, Hidden } from '@material-ui/core';
 import LeftMenu from './standard/menus/LeftMenu';
 import RightMenu from './standard/menus/RightMenu';
@@ -8,17 +7,13 @@ import BottomMenu from './mobile/menus/BottomMenu';
 
 export default function Index() {
     return (
-        <div>        
-            <Helmet>
-                <title>Trevor Bland - Dashboard</title>
-                <meta name="description" content="" />
-            </Helmet>
+        <div>
             <React.Fragment>
 
                 <Hidden only={['xs', 'sm', 'md']}>
                     <Grid container direction="row" justify="flex-start" alignItems="flex-start">
-                            <LeftMenu />
-                            <RightMenu />
+                        <LeftMenu />
+                        <RightMenu />
                     </Grid>
                 </Hidden>
 
