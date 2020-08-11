@@ -50,7 +50,7 @@ const SectionItem = ({img, title, internalLink, contributors, technologies, live
             <img style={imageStyles.coverStyle} src={img} alt={title}/>            
         </Grid>
       </Grid>
-      <Grid item className="tertiary-color" style={{margin: '10px 0px 0px 0px'}}>
+      <Grid item className="section-item tertiary-color" style={{margin: '10px 0px 0px 0px'}}>
         <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
         <Grid item style={{padding: '5%'}}>
           {children}
