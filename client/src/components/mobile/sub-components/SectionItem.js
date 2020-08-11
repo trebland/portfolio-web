@@ -3,8 +3,7 @@ import { Grid } from '@material-ui/core';
 
 const imageStyles = {
     coverStyle: {
-      maxWidth: '80%',
-      maxHeight: '50vh',
+      maxHeight: '40vh',
       borderRadius: '20px',
     },
     profile: {
