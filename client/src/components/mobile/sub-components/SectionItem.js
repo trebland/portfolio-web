@@ -26,8 +26,7 @@ const textStyles = {
     marginBottom: '20px'
   },
   descriptionContentOverview: {
-    textAlign: 'left',
-    padding: '20px' 
+    textAlign: 'left'
   },
   descriptionContentRight: {
     textAlign: 'right', 
@@ -52,7 +51,7 @@ const SectionItem = ({img, title, internalLink, contributors, technologies, live
       </Grid>
       <Grid item className="section-item tertiary-color" style={{margin: '10px 0px 0px 0px'}}>
         <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
-        <Grid item style={{padding: '5%'}}>
+        <Grid className="section-description" item>
           {children}
         </Grid>
       </Grid>

@@ -16,7 +16,7 @@ export default function About() {
         <div id="about">
             <Grid className="tertiary-color" container item direction="column" justify="flex-start" alignItems="flex-start">
               <SectionContainer>
-                  <Grid className="section-item" style={{padding: 40}} container item direction="column" justify="flex-start" alignItems="center">
+                  <Grid className="section-item section-description" container item direction="column" justify="flex-start" alignItems="center">
                     <h1 className="about-item caption">Fullstack, Game, and Mobile Application Developer.</h1>
                     <h2 className="about-item">Traveler, Competitive Gamer, and Gardener.</h2>
                     <img style={imageStyles.coverStyle} src={AboutCover} alt={"The Hong Kong Polytechnic University Student Group"}></img>

@@ -14,7 +14,7 @@ export default function Projects() {
               
                 <SectionContainer>
                     <SectionHeader headerTitle={"Latest Development"}/>
-                    <SectionItem img={Repopit} title={"Repopit.dev"} internalLink={"/projects/repopit"} contributors={["Trevor Bland"]} 
+                    <SectionItem img={Repopit} title={"Repopit.dev"} contributors={["Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
                         liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW isGithub={true} link={"portfolio-web"}><GithubIcon /></LW>} 
                         date={"August 2020"} position={1}>
@@ -24,7 +24,7 @@ export default function Projects() {
 
                 <SectionContainer>
                     <SectionHeader headerTitle={"Full Stack"}/>
-                    <SectionItem img={OperationPortal} title={"Operation Portal"} internalLink={"/projects/repopit"}
+                    <SectionItem img={OperationPortal} title={"Operation Portal"}
                         contributors={["Thomas Anchor","Scott Lee","Baldwin Suen","Jacqueline Van Der Meulen","Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><DotNetIcon /><PostgreSqlIcon /><ReactIcon /><FlutterIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
                         liveLinks={<span><LW isAndroid={true} link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW isApple={true} link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW><LW link={"https://www.operation-portal.com"}><WebIcon /></LW></span>} 
@@ -36,7 +36,7 @@ export default function Projects() {
 
                 <SectionContainer>
                     <SectionHeader headerTitle={"Mobile Applications"}/>
-                    <SectionItem img={FocusPocus} title={"Focus Pocus"} internalLink={"/projects/repopit"}
+                    <SectionItem img={FocusPocus} title={"Focus Pocus"}
                         contributors={["Phillip Tat", "Zachary Arehart", "Rob Lee", "Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><MongoDbIcon /><ExpressIcon /><ReactIcon /><NodeJsIcon /><FlutterIcon /><AwsIcon /></span>}
                         sourceLink={<LW isGithub={true} link={"FocusPocus"}><GithubIcon /></LW>} 
@@ -47,7 +47,7 @@ export default function Projects() {
 
                 <SectionContainer>
                     <SectionHeader headerTitle={"Games"}/>
-                    <SectionItem img={AntiBody} title={"Anti-Body"} internalLink={"/projects/repopit"} 
+                    <SectionItem img={AntiBody} title={"Anti-Body"}
                         contributors={["David Lopez", "Trevor Bland", "Joseph Peaden", "Stephanie Peaden", "Chris Peaden", "Zachary Goodless"]}
                         technologies={<span><UnityIcon /><CSharpIcon /></span>} 
                         liveLinks={<span><LW link={"https://globalgamejam.org/2018/games/anti-body"}><WebIcon /></LW></span>} 

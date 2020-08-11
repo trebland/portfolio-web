@@ -172,8 +172,8 @@ a.img__description:hover {
 }
 
 .section {
-  padding: 0px 50px;
-  max-width: 95%;
+  padding: 0px 0px;
+  max-width: 100%;
 }
 
 .section-item {
@@ -252,7 +252,7 @@ a.img__description:hover {
 
 #bottom-menu .section-description {
   border-radius: 10px;
-  padding: 0px 10px;
+  padding: 0px 50px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
