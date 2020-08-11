@@ -20,57 +20,19 @@ h4 {
   font-size: 24px;
 }
 
-.App {
-  text-align: center;
-}
-
-#left-menu {
-  width: 20%;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  padding-top: 40px;
-  right: auto;
-  background-color: #19191A;
-}
-
-#right-menu {
-  position: absolute;
-  left: 20%;
-  width: 80%;
-  background-color: #19191A;
-}
-
-#top-menu {
-  background-color: #19191A !important;
-}
-
-#bottom-menu {
-  background-color: #19191A;
+#web-portfolio {
+  width: 100vw;
 }
 
 .primary-font {
   font-family: 'Arvo', serif;
 }
 
-.secondary-font {
-  font-family: 'Arvo', serif;
-}
-
-.section .title {
-  font-style: italic;
-  font-weight: 700;
-}
-
-.caption {
-  color: #FF8945;
-  padding-bottom: 5px;
-}
+/* Overlay Styling */
 
 .tech-icon {
   color: #fff;
   font-size: 32px !important;
-  padding-right: 5px;
 
   -webkit-transition: color .5s; /* For Safari 3.0 to 6.0 */
   transition: color .5s; /* For modern browsers */
@@ -157,25 +119,12 @@ a.img__description:hover {
   text-decoration: none;
 }
 
-a.button__text {
-  text-decoration: none;
-}
-
-a.button__text:hover {
-  text-decoration: none;
-}
-
 .img__wrap:hover .img__description {
   visibility: visible;
   opacity: 1;
 }
 
 /* Nav Link */
-
-button {
-  background-color: transparent;
-  border: none;
-}
 
 .nav-link {
   color: rgb(255, 255, 255);
@@ -193,32 +142,21 @@ button {
   color: rgb(124, 143, 252);
 }
 
-.primary-color {
-  color: #FFFFFF;
-  background-color: #19191A;
+/* General Stylings */
+
+
+.about-item.title{
+  color: #FF8945;
+  font-size: 2.5vmin;
 }
 
-.secondary-color {
-  color: #FFFFFF;
-  background-color: #303030;
+.about-item.subtitle{
+  font-size: 1rem;
 }
 
-.tertiary-color {
-  color: #FFFFFF;
-  background-color: #1e1e1e;
-}
-
-.background-accent {
-  color: #FFFFFF !important;
-  background-color: #FF8036 !important;
-
-  -webkit-transition: background-color 500ms linear !important;
-  -ms-transition: background-color 500ms linear !important;
-  transition: background-color 500ms linear !important;
-}
-
-.background-accent:hover {
-  background-color: #FF9C63 !important;
+.caption {
+  color: #FF8945;
+  padding-bottom: 5px;
 }
 
 .full-height {
@@ -233,7 +171,7 @@ button {
 }
 
 .section {
-  padding: 0px 50px;
+  padding: 0px 0px;
   max-width: 100%;
 }
 
@@ -241,21 +179,37 @@ button {
   border-radius: 10px;
 }
 
-.title {
-  font-size: 3vmin;
+.section .title {
+  font-style: italic;
+  font-weight: 700;
 }
 
 .subtitle {
   font-size: 2vmin;
 }
 
-.about-item.title{
-  color: #FF8945;
-  font-size: 2.5vmin;
+.title {
+  font-size: 3vmin;
 }
 
-.about-item.subtitle{
-  font-size: 1rem;
+
+/* Standard */
+
+#left-menu {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  padding-top: 40px;
+  right: auto;
+  background-color: #19191A;
+}
+
+#right-menu {
+  position: absolute;
+  left: 20%;
+  width: 80%;
+  background-color: #19191A;
 }
 
 #right-menu .about-item.body{
@@ -265,12 +219,12 @@ button {
 
 /* Mobile */
 
-.white {
-  color: white;
+#top-menu {
+  background-color: #19191A !important;
 }
 
-.orange {
-  color: #FF8945;
+#bottom-menu {
+  background-color: #19191A;
 }
 
 #top-menu .title {
@@ -296,8 +250,10 @@ button {
 }
 
 #bottom-menu .section-description {
+  overflow-wrap: break-word;
+
   border-radius: 10px;
-  padding: 0px 10px;
+  padding: 0px 50px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -318,4 +274,28 @@ button {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+/* Colors */
+.white {
+  color: white;
+}
+
+.orange {
+  color: #FF8945;
+}
+
+.primary-color {
+  color: #FFFFFF;
+  background-color: #19191A;
+}
+
+.secondary-color {
+  color: #FFFFFF;
+  background-color: #303030;
+}
+
+.tertiary-color {
+  color: #FFFFFF;
+  background-color: #1e1e1e;
 }

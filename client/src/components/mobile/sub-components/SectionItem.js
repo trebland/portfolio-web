@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 const imageStyles = {
     coverStyle: {
       maxWidth: '80%',
-      maxHeight: '50vh',
+      maxHeight: '40vh',
       borderRadius: '20px',
     },
     profile: {
@@ -26,8 +26,7 @@ const textStyles = {
     marginBottom: '20px'
   },
   descriptionContentOverview: {
-    textAlign: 'left',
-    padding: '20px' 
+    textAlign: 'left'
   },
   descriptionContentRight: {
     textAlign: 'right', 
@@ -38,21 +37,21 @@ const textStyles = {
 // img: Image of the project to display
 // title: Title of the project
 // internalLink: Link to the project page (internal link)
-// contributors: List of names of those who contributed to the project
-// technologies: List of technology icons that the project is composed of
+// contributors: List of names of those who contributed to the project (must be array type)
+// technologies: List of technology icons that the project is composed of (must be array type)
 // externalLinks: List of external links, linking to live project locations
 // date: date the project was released
 
-const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position, children}) => (
+const SectionItem = ({img, title, contributors, technologies, liveLinks, sourceLink, date, position, children}) => (
     <Grid container item direction="column" justify="center" alignItems="center" className="section-item">
       <Grid container item direction="column" justify="center" alignItems="center" xs={12}>
         <Grid container item direction="row" justify="center" alignItems="center" xs={12}>            
             <img style={imageStyles.coverStyle} src={img} alt={title}/>            
         </Grid>
       </Grid>
-      <Grid item className="section-item tertiary-color" style={{margin: '10px 0px'}}>
+      <Grid item className="section-item tertiary-color" style={{margin: '10px 0px 0px 0px'}}>
         <SectionDescription title={title} contributors={contributors} technologies={technologies} liveLinks={liveLinks} sourceLink={sourceLink} date={date} position={position}/>
-        <Grid item style={{padding: '5%'}}>
+        <Grid className="section-description" item>
           {children}
         </Grid>
       </Grid>
@@ -71,7 +70,7 @@ const SectionItem = ({img, title, internalLink, contributors, technologies, live
 // title: Title of the project
 // contributors: List of names of those who contributed to the project (must be array type)
 // date: date the project was released
-// technologies: List of technology icons that the project is composed of (optional)
+// technologies: List of technology icons that the project is composed of (optional) (must be array type)
 // liveLinks: List of external links to live project locations (optional)
 // sourceLink: Github link (or other code repository link) (optional)
 // position: Whether the content should appear on the left or right side of the page
@@ -80,7 +79,7 @@ const SectionDescription = ({title, contributors, technologies, liveLinks, sourc
   <Grid className="section-description tertiary-color" style={textStyles.descriptionContentOverview} container item direction="column" justify="center" alignItems="center" xs={12}>         
     <div className="title" style={textStyles.descriptionTitle}>{title}</div>
     <div style={textStyles.descriptionContent}><CreditContainer>{contributors.map(contributor => (<div className="contributor" key={contributor}>{contributor}</div>))}</CreditContainer></div>
-    <div style={textStyles.descriptionContent}>{technologies ? <TechnologyContainer>{technologies}</TechnologyContainer> : <></>}</div>
+    <div style={textStyles.descriptionContent}>{technologies ? <TechnologyContainer>{technologies.map(technology => (<div key={technology}>{technology}</div>))}</TechnologyContainer> : <></>}</div>
     <div style={textStyles.descriptionContent}><LinkAndSourceContainer position={position}>{liveLinks ? <LinkContainer>{liveLinks}</LinkContainer> : <></>}{sourceLink ? <SourceContainer>{sourceLink}</SourceContainer> : <></>}</LinkAndSourceContainer></div>
     <div style={textStyles.descriptionContent}><DateContainer>{date}</DateContainer></div>
   </Grid>
@@ -108,13 +107,13 @@ const DateContainer = ({children}) => (
 )
 
 const LinkAndSourceContainer = ({position, children}) => (
-  <Grid container item direction="row" justify="flex-start" alignItems="center" spacing={4}>
+  <Grid container item direction="row" justify="flex-start" alignItems="center">
     {children}
   </Grid>
 )
 
 const LinkContainer = ({children}) => (
-  <Grid item className="link-container">
+  <Grid item className="link-container" style={{paddingRight: '20px'}}>
     <h4 className="caption">Links</h4>
     {children}
   </Grid>
