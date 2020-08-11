@@ -48,7 +48,7 @@ const textStyles = {
 // date: date the project was released
 // children: the text description passed as a child
 
-const SectionItem = ({img, title, internalLink, contributors, technologies, liveLinks, sourceLink, date, position, children}) => (
+const SectionItem = ({img, title, contributors, technologies, liveLinks, sourceLink, date, position, children}) => (
   <Grid container item direction="column" justify="center" alignItems="center" className="section-item tertiary-color" style={{padding: '20px 0px'}} xs={9}>
     <Grid container item direction={position%2 ? "row" : "row-reverse"} justify="center" alignItems="center">
       <Grid container item direction="column" justify="center" alignItems="center" sm={6}>

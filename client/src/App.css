@@ -20,8 +20,8 @@ h4 {
   font-size: 24px;
 }
 
-.App {
-  text-align: center;
+#web-portfolio {
+  width: 100vw;
 }
 
 .primary-font {
@@ -252,7 +252,7 @@ a.img__description:hover {
 
 #bottom-menu .section-description {
   border-radius: 10px;
-  padding: 0px 50px;
+  padding: 0px 50px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
