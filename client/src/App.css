@@ -33,7 +33,6 @@ h4 {
 .tech-icon {
   color: #fff;
   font-size: 32px !important;
-  padding-right: 5px;
 
   -webkit-transition: color .5s; /* For Safari 3.0 to 6.0 */
   transition: color .5s; /* For modern browsers */
@@ -173,7 +172,7 @@ a.img__description:hover {
 
 .section {
   padding: 0px 0px;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .section-item {
@@ -251,6 +250,8 @@ a.img__description:hover {
 }
 
 #bottom-menu .section-description {
+  overflow-wrap: break-word;
+
   border-radius: 10px;
   padding: 0px 50px 10px;
   margin-top: 10px;

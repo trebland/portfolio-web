@@ -26,7 +26,7 @@ export default function Projects() {
                     <SectionHeader headerTitle={"Full Stack"}/>
                     <SectionItem img={OperationPortal} title={"Operation Portal"}
                         contributors={["Thomas Anchor","Scott Lee","Baldwin Suen","Jacqueline Van Der Meulen","Trevor Bland"]} 
-                        technologies={<span><ReactIcon /><FlutterIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
+                        technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><DotNetIcon /><PostgreSqlIcon /><ReactIcon /><FlutterIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
                         liveLinks={<span><LW isAndroid={true} link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW isApple={true} link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW><LW link={"https://www.operation-portal.com"}><WebIcon /></LW></span>} 
                         sourceLink={<LW isGithub={true} link={"OperationPortal"}><GithubIcon /></LW>} 
                         date={"April 2020"} position={2}>
@@ -38,7 +38,7 @@ export default function Projects() {
                     <SectionHeader headerTitle={"Mobile Applications"}/>
                     <SectionItem img={FocusPocus} title={"Focus Pocus"}
                         contributors={["Phillip Tat", "Zachary Arehart", "Rob Lee", "Trevor Bland"]} 
-                        technologies={<span><ReactIcon /><NodeJsIcon /><FlutterIcon /><AwsIcon /></span>}
+                        technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><MongoDbIcon /><ExpressIcon /><ReactIcon /><NodeJsIcon /><FlutterIcon /><AwsIcon /></span>}
                         sourceLink={<LW isGithub={true} link={"FocusPocus"}><GithubIcon /></LW>} 
                         date={"December 2019"} position={3}>
                             "Hocus Pocus, Now You're More Focused!" Focus Pocus was created to manage your daily routines using an automatic timer switch. You'd input your routines and the allotment for them, and it would notify you when the routine should be completed and breaks should be taken.
