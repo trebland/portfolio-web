@@ -107,13 +107,13 @@ const DateContainer = ({children}) => (
 )
 
 const LinkAndSourceContainer = ({position, children}) => (
-  <Grid container item direction="row" justify="flex-start" alignItems="center" spacing={4}>
+  <Grid container item direction="row" justify="flex-start" alignItems="center">
     {children}
   </Grid>
 )
 
 const LinkContainer = ({children}) => (
-  <Grid item className="link-container">
+  <Grid item className="link-container" style={{paddingRight: '20px'}}>
     <h4 className="caption">Links</h4>
     {children}
   </Grid>
