@@ -11,9 +11,9 @@ export default function Projects() {
     return (
         <div id="projects">
             <Grid container item direction="column" justify="flex-start" alignItems="center">
-              
+                <h2 className="part-header orange">Projects</h2>
                 <SectionContainer>
-                    <SectionHeader headerTitle={"Latest Development"} linkDestination={"/fullstack"}/>
+                    <SectionHeader headerTitle={"Latest Development"}/>
                     <SectionItem img={Repopit} title={"Repopit.dev"} internalLink={"/projects/repopit"} contributors={["Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><ReactIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
                         liveLinks={<LW link={"https://repopit.dev"}><WebIcon /></LW>} sourceLink={<LW isGithub={true} link={"portfolio-web"}><GithubIcon /></LW>} 
@@ -23,11 +23,11 @@ export default function Projects() {
                 </SectionContainer>
 
                 <SectionContainer>
-                    <SectionHeader headerTitle={"Full Stack"} linkDestination={"/fullstack"}/>
+                    <SectionHeader headerTitle={"Full Stack"}/>
                     <SectionItem img={OperationPortal} title={"Operation Portal"} internalLink={"/projects/repopit"}
                         contributors={["Thomas Anchor","Scott Lee","Baldwin Suen","Jacqueline Van Der Meulen","Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><DotNetIcon /><PostgreSqlIcon /><ReactIcon /><FlutterIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></span>} 
-                        liveLinks={<span><LW isAndroid={true} link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW isApple={true} link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW><LW link={"https://www.operation-portal.com"}><WebIcon /></LW></span>} 
+                        liveLinks={<span><LW isAndroid={true} link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW isApple={true} link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW></span>} 
                         sourceLink={<LW isGithub={true} link={"OperationPortal"}><GithubIcon /></LW>} 
                         date={"April 2020"} position={2}>
                             A Mobile-Web application designed to improve Orlando Childrens Church ability to help at risk youth. Operation Portal helps their Saturday routines, giving them the ability to help feed and care for more kids during their volunteer routine. Please visit <LW link="http://orlandochildrenschurch.org/">Orlando Children's Church</LW> if you'd like to contribute to their cause.
@@ -35,7 +35,7 @@ export default function Projects() {
                 </SectionContainer>
 
                 <SectionContainer>
-                    <SectionHeader headerTitle={"Mobile Applications"} linkDestination={"/mobile"}/>
+                    <SectionHeader headerTitle={"Mobile Applications"}/>
                     <SectionItem img={FocusPocus} title={"Focus Pocus"} internalLink={"/projects/repopit"}
                         contributors={["Phillip Tat", "Zachary Arehart", "Rob Lee", "Trevor Bland"]} 
                         technologies={<span><HtmlIcon /><JsIcon /><CssIcon /><MongoDbIcon /><ExpressIcon /><ReactIcon /><NodeJsIcon /><FlutterIcon /><AwsIcon /></span>}
@@ -46,7 +46,7 @@ export default function Projects() {
                 </SectionContainer>
 
                 <SectionContainer>
-                    <SectionHeader headerTitle={"Games"} linkDestination={"/games"}/>
+                    <SectionHeader headerTitle={"Games"}/>
                     <SectionItem img={AntiBody} title={"Anti-Body"} internalLink={"/projects/repopit"}
                         contributors={["David Lopez", "Trevor Bland", "Joseph Peaden", "Stephanie Peaden", "Chris Peaden", "Zachary Goodless"]}
                         technologies={<span><UnityIcon /><CSharpIcon /></span>} 

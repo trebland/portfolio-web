@@ -11,7 +11,7 @@ export default function Projects() {
     return (
         <div id="projects">
             <Grid container item direction="column" justify="flex-start" alignItems="center">
-              
+                <h2 className="part-header orange">Projects</h2>
                 <SectionContainer>
                     <SectionHeader headerTitle={"Latest Development"}/>
                     <SectionItem img={Repopit} title={"Repopit.dev"} contributors={["Trevor Bland"]} 
@@ -27,7 +27,7 @@ export default function Projects() {
                     <SectionItem img={OperationPortal} title={"Operation Portal"}
                         contributors={["Thomas Anchor","Scott Lee","Baldwin Suen","Jacqueline Van Der Meulen","Trevor Bland"]} 
                         technologies={[<><HtmlIcon /><JsIcon /><CssIcon /><DotNetIcon /><PostgreSqlIcon /><ReactIcon /></>,<><FlutterIcon /><ReduxIcon /><MaterialUiIcon /><AwsIcon /></>]} 
-                        liveLinks={<span><LW isAndroid={true} link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW isApple={true} link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW><LW link={"https://www.operation-portal.com"}><WebIcon /></LW></span>} 
+                        liveLinks={<span><LW isAndroid={true} link={"org.orlandochildrenschurch.operationportal"}><AndroidIcon /></LW><LW isApple={true} link={"orlando-childrens-church/id1505236896?app=itunes&ign-mpt=uo%3D4"}><IosIcon /></LW></span>} 
                         sourceLink={<LW isGithub={true} link={"OperationPortal"}><GithubIcon /></LW>} 
                         date={"April 2020"} position={2}>
                             A Mobile-Web application designed to improve Orlando Childrens Church ability to help at risk youth. Operation Portal helps their Saturday routines, giving them the ability to help feed and care for more kids during their volunteer routine. Please visit <LW link="http://orlandochildrenschurch.org/">Orlando Children's Church</LW> if you'd like to contribute to their cause.
